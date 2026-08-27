@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>MIG Journal Club</title>
+<link>https://melbintgen.github.io/mig-journal-club/</link>
+<atom:link href="https://melbintgen.github.io/mig-journal-club/index.xml" rel="self" type="application/rss+xml"/>
+<description>Readings and discussion from the Melbourne Integrative Genomics journal club.</description>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Tue, 18 Aug 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Pre-training scale in single-cell foundation models</title>
+  <dc:creator>David Hirst</dc:creator>
+  <link>https://melbintgen.github.io/mig-journal-club/posts/2026-08-18-scfm-pretraining-scale/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Paper.</strong> DenAdel A, Hughes M, Thoutam A, Gupta A, Navia AW, Fusi N, Raghavan S, Winter PS, Amini AP, Crawford L. <em>Evaluating the role of pre-training dataset size and diversity on single-cell foundation model performance.</em> Nature Methods (2026). <a href="https://doi.org/10.1038/s41592-026-03120-y">doi:10.1038/s41592-026-03120-y</a></p>
+<p><strong>Presented by</strong> David Hirst · <strong>18 August 2026</strong></p>
+</div>
+</div>
+</div>
+<section id="the-study" class="level2">
+<h2 class="anchored" data-anchor-id="the-study">The study</h2>
+<p>The paper asks whether single-cell foundation models (scFMs) obey the scaling behaviour established for language models. The authors subsampled the 22.2 million-cell scTab corpus (164 cell types, 5,052 donors, 56 tissues, drawn from the CELLxGENE census) at 1, 10, 25, 50 and 75%, under three sampling schemes — uniform, cell-type re-weighted, and geometric sketching — and pre-trained five architectures of increasing complexity on each: PCA, scVI, a masked autoencoder (SSL), Geneformer, and SCimilarity. This yields 400 pre-trained models and 6,400 downstream evaluations spanning zero-shot and fine-tuned cell-type classification, batch integration, and perturbation response prediction.</p>
+<p>Performance saturates at roughly 1% of the corpus, approximately 200,000 cells and under a gigabyte of counts. Diversity-enriched sampling confers no advantage over uniform sampling. In every task, the pre-trained models are matched or beaten by unsupervised PCA computed directly on the evaluation dataset and by logistic regression on highly variable genes.</p>
+</section>
+<section id="terminology-clarified-in-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="terminology-clarified-in-discussion">Terminology clarified in discussion</h2>
+<p>Two terms were first discussed, both used loosely in the literature. <em>Foundation model</em> was initially equated with large language model, but the paper adopts the broader sense of any model whose learned representation is reused as a scaffold for downstream tasks — which is why a pre-trained PCA qualifies. Every architecture here is used identically: it supplies a low-dimensional embedding (loading vectors for PCA, encoder weights for scVI), and that embedding is transferred to the new dataset. <em>Zero-shot</em> denotes use of the embedding without further training, with classification performed by nearest neighbours; <em>fine-tuned</em> denotes retraining of some or all parameters, which for PCA means fixing the loadings and appending a neural network classifier.</p>
+<p>The more substantive contribution was a reframing of the plateau in terms of <strong>effective sample size</strong>. In single-cell data the effective sample size lies between the number of donors and the number of cells. Pseudo-bulking sits at the conservative extreme: it guarantees independence but discards within-donor variation. On this reading the saturation point is an empirical estimate of where the effective sample size sits for a given learning task — the authors did not explain this.</p>
+</section>
+<section id="criticisms" class="level2">
+<h2 class="anchored" data-anchor-id="criticisms">Criticisms</h2>
+<p>The dominant concern was that the study varies cells rather than donors. Sample size in this context means biological replication; 5,052 donors is adequate for biological inference and far short of what a large model requires. Downsampling cells within a fixed corpus therefore adds repetition and technical noise rather than information, and the observed plateau may say more about scTab than about scFMs. Rerunning the design on an independent pre-training corpus, or subsampling studies rather than cells, would separate the two.</p>
+<p>Related to this, several attendees argued that the value of a foundation model should be assessed against deliberately heterogeneous, noisy training data. The study considered the training on a corpus assembled under (potentially) broadly uniform protocols.</p>
+<p>The provenance of the ground-truth cell-type labels was raised and remains unresolved. Public atlas annotations are routinely generated by PCA followed by clustering and manual labelling. If the reference labels were produced this way, a PCA-derived classifier recovering them is close to circular, and the headline result that simple baselines win loses much of its force. It was also noted that PCA is the current practical default rather than an optimal reduction, and that cell-type-discriminating variance can fall outside the retained components.</p>
+<p>On evaluation design, fine-tuning splits a single dataset 80/10/10 and reports test performance from the same study, which inflates accuracy relative to the realistic case of training and testing on independent studies. In fairness, the authors did guard against leakage at the corpus level by restricting evaluation datasets to studies published after the 2023-05-15 census release, so none appear in scTab; the objection applies to the fine-tuning split alone.</p>
+<p>The choice of downstream tasks drew the sharpest criticism. Cell-type annotation and batch correction are largely solved problems, so demonstrating that foundation models fail to improve on them is a weak test of the paradigm. The question left standing is what a general-purpose scFM is actually for: if the only tasks that generalise across studies are ones already handled by conventional methods, the biologically interesting questions may be irreducibly study-specific.</p>
+<p>Perturbation response prediction supports that reading. For three of the four compounds tested, every fine-tuned model was outperformed by a baseline predicting no change in expression. Discussion attributed this partly to uncharacterised technical effects in the underlying data, and noted that this is precisely the regime in which robust linear methods should be expected to win.</p>
+<p>The absence of pre-training learning curves was noted as a gap. A study framed around dataset size and generalisation should report training and validation loss as a function of corpus size and show where the two diverge; the reported downstream F1 curves are only indirect evidence.</p>
+<p>Finally, the authorship was discussed. The view expressed was that a design originating from single-cell specialists would have anticipated most of the limitations above.</p>
+</section>
+<section id="transfer-works-for-language-but-maybe-not-for-expression" class="level2">
+<h2 class="anchored" data-anchor-id="transfer-works-for-language-but-maybe-not-for-expression">Transfer works for language but maybe not for expression?</h2>
+<p>The most developed technical argument concerned batch effects. In natural language, batch effects are enumerable — regional variants differ in orthography, idiom and lexical choice — so a sufficiently large corpus contains them all and the model learns to marginalise over them. Transcriptomic batch effects are not enumerable: each operator, day and reagent lot generates a novel effect, so no corpus contains the full space. A review by Jiang was cited as making this argument. A complementary point was raised on target complexity: token combinatorics in language are effectively unbounded, whereas cell-type space is small, and separate ongoing work indicates that roughly 150 features suffice for cell-type prediction. Most genes contribute nothing to the task, so additional data and features dilute rather than sharpen the signal.</p>
+<p>Three constructive directions followed: importing the statistical genetics toolkit (GWAS, fine-mapping, causal inference) rather than relying on scale alone; aligning the pre-training objective with the intended downstream task, for which the paper supplies direct evidence in SCimilarity’s contrastive objective and its correspondingly strong cell-type performance; and moving toward automated experimental design rather than passive accumulation of data.</p>
+</section>
+<section id="follow-up-reading" class="level2">
+<h2 class="anchored" data-anchor-id="follow-up-reading">Follow-up reading</h2>
+<p>Chengyi proposed a companion paper: Rosen Y, Roohani Y, Agrawal A, Samotorčan L, Tabula Sapiens Consortium, Quake SR, Leskovec J. <em>Universal cell embedding provides a foundation model for cell biology.</em> Nature 656:183–191 (2026). <a href="https://doi.org/10.1038/s41586-026-10689-z">doi:10.1038/s41586-026-10689-z</a></p>
+<p>UCE pursues the same premise — self-supervised pre-training on a large corpus to yield a universal per-cell embedding — but reports strong zero-shot downstream performance without fine-tuning, across 36 million cells and over 1,000 cell types, including generalisation to species absent from training. The apparent contradiction with DenAdel et al.&nbsp;is the reason to read the two together, and turns on evaluation task, corpus composition, and whether the reported gains survive a PCA baseline.</p>
+<hr>
+<p><em>Compiled from the meeting recording. Speaker separation is not available in the room-microphone transcript, so contributions are attributed only where a name was used aloud.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>single-cell</category>
+  <category>foundation-models</category>
+  <category>benchmarking</category>
+  <category>machine-learning</category>
+  <guid>https://melbintgen.github.io/mig-journal-club/posts/2026-08-18-scfm-pretraining-scale/</guid>
+  <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

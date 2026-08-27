@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "CODE_OF_CONDUCT.html",
+    "href": "CODE_OF_CONDUCT.html",
+    "title": "Code of conduct",
+    "section": "",
+    "text": "The MIG journal club is a place to read carefully and disagree well. These expectations apply to meetings, to this repository, and to anything published here."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#expected-behaviour",
+    "href": "CODE_OF_CONDUCT.html#expected-behaviour",
+    "title": "Code of conduct",
+    "section": "Expected behaviour",
+    "text": "Expected behaviour\n\nCriticise work, not people. “This design cannot separate cells from donors” is useful. “The authors clearly don’t understand single-cell data” is not.\nAssume good faith. Papers are written under constraints we cannot see, by people who are not in the room to reply.\nMake space. Journal clubs are dominated by whoever is most confident. Presenters and chairs should actively invite quieter attendees in.\nAsk the naive question. If you are lost, others are too, and saying so improves the discussion for everyone."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#publication-and-attribution",
+    "href": "CODE_OF_CONDUCT.html#publication-and-attribution",
+    "title": "Code of conduct",
+    "section": "Publication and attribution",
+    "text": "Publication and attribution\nMeetings are reported and published on this public site. Because of that:\n\nReports name the presenter, and may name people who proposed follow-up reading. Discussion points are otherwise attributed impersonally.\nYou can ask not to be named. Tell the organisers, before or after the meeting, and we will remove the attribution. No reason needed.\nCriticism published here is directed at the work. Before a report is merged it is reviewed by someone other than its author, partly to check this.\n\nSee contributing for the full reporting process."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#unacceptable-behaviour",
+    "href": "CODE_OF_CONDUCT.html#unacceptable-behaviour",
+    "title": "Code of conduct",
+    "section": "Unacceptable behaviour",
+    "text": "Unacceptable behaviour\nHarassment, discrimination, personal attacks, and dismissive remarks about someone’s background or level of experience are not tolerated, in the room or in this repository."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#reporting",
+    "href": "CODE_OF_CONDUCT.html#reporting",
+    "title": "Code of conduct",
+    "section": "Reporting",
+    "text": "Reporting\nRaise a concern with the journal club organisers directly. Anything involving the conduct of an organiser can be taken to the University of Melbourne’s staff complaint channels."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MIG Journal Club",
+    "section": "",
+    "text": "We meet to read one paper properly rather than five badly. Each meeting is written up here — what the paper claimed, what the room made of it, and what stayed unresolved. New members and visitors are welcome."
+  },
+  {
+    "objectID": "index.html#past-meetings",
+    "href": "index.html#past-meetings",
+    "title": "MIG Journal Club",
+    "section": "Past meetings",
+    "text": "Past meetings"
+  },
+  {
+    "objectID": "posts/2026-08-18-scfm-pretraining-scale/index.html",
+    "href": "posts/2026-08-18-scfm-pretraining-scale/index.html",
+    "title": "Pre-training scale in single-cell foundation models",
+    "section": "",
+    "text": "Paper. DenAdel A, Hughes M, Thoutam A, Gupta A, Navia AW, Fusi N, Raghavan S, Winter PS, Amini AP, Crawford L. Evaluating the role of pre-training dataset size and diversity on single-cell foundation model performance. Nature Methods (2026). doi:10.1038/s41592-026-03120-y\nPresented by David Hirst · 18 August 2026"
+  },
+  {
+    "objectID": "posts/2026-08-18-scfm-pretraining-scale/index.html#the-study",
+    "href": "posts/2026-08-18-scfm-pretraining-scale/index.html#the-study",
+    "title": "Pre-training scale in single-cell foundation models",
+    "section": "The study",
+    "text": "The study\nThe paper asks whether single-cell foundation models (scFMs) obey the scaling behaviour established for language models. The authors subsampled the 22.2 million-cell scTab corpus (164 cell types, 5,052 donors, 56 tissues, drawn from the CELLxGENE census) at 1, 10, 25, 50 and 75%, under three sampling schemes — uniform, cell-type re-weighted, and geometric sketching — and pre-trained five architectures of increasing complexity on each: PCA, scVI, a masked autoencoder (SSL), Geneformer, and SCimilarity. This yields 400 pre-trained models and 6,400 downstream evaluations spanning zero-shot and fine-tuned cell-type classification, batch integration, and perturbation response prediction.\nPerformance saturates at roughly 1% of the corpus, approximately 200,000 cells and under a gigabyte of counts. Diversity-enriched sampling confers no advantage over uniform sampling. In every task, the pre-trained models are matched or beaten by unsupervised PCA computed directly on the evaluation dataset and by logistic regression on highly variable genes."
+  },
+  {
+    "objectID": "posts/2026-08-18-scfm-pretraining-scale/index.html#terminology-clarified-in-discussion",
+    "href": "posts/2026-08-18-scfm-pretraining-scale/index.html#terminology-clarified-in-discussion",
+    "title": "Pre-training scale in single-cell foundation models",
+    "section": "Terminology clarified in discussion",
+    "text": "Terminology clarified in discussion\nTwo terms were first discussed, both used loosely in the literature. Foundation model was initially equated with large language model, but the paper adopts the broader sense of any model whose learned representation is reused as a scaffold for downstream tasks — which is why a pre-trained PCA qualifies. Every architecture here is used identically: it supplies a low-dimensional embedding (loading vectors for PCA, encoder weights for scVI), and that embedding is transferred to the new dataset. Zero-shot denotes use of the embedding without further training, with classification performed by nearest neighbours; fine-tuned denotes retraining of some or all parameters, which for PCA means fixing the loadings and appending a neural network classifier.\nThe more substantive contribution was a reframing of the plateau in terms of effective sample size. In single-cell data the effective sample size lies between the number of donors and the number of cells. Pseudo-bulking sits at the conservative extreme: it guarantees independence but discards within-donor variation. On this reading the saturation point is an empirical estimate of where the effective sample size sits for a given learning task — the authors did not explain this."
+  },
+  {
+    "objectID": "posts/2026-08-18-scfm-pretraining-scale/index.html#criticisms",
+    "href": "posts/2026-08-18-scfm-pretraining-scale/index.html#criticisms",
+    "title": "Pre-training scale in single-cell foundation models",
+    "section": "Criticisms",
+    "text": "Criticisms\nThe dominant concern was that the study varies cells rather than donors. Sample size in this context means biological replication; 5,052 donors is adequate for biological inference and far short of what a large model requires. Downsampling cells within a fixed corpus therefore adds repetition and technical noise rather than information, and the observed plateau may say more about scTab than about scFMs. Rerunning the design on an independent pre-training corpus, or subsampling studies rather than cells, would separate the two.\nRelated to this, several attendees argued that the value of a foundation model should be assessed against deliberately heterogeneous, noisy training data. The study considered the training on a corpus assembled under (potentially) broadly uniform protocols.\nThe provenance of the ground-truth cell-type labels was raised and remains unresolved. Public atlas annotations are routinely generated by PCA followed by clustering and manual labelling. If the reference labels were produced this way, a PCA-derived classifier recovering them is close to circular, and the headline result that simple baselines win loses much of its force. It was also noted that PCA is the current practical default rather than an optimal reduction, and that cell-type-discriminating variance can fall outside the retained components.\nOn evaluation design, fine-tuning splits a single dataset 80/10/10 and reports test performance from the same study, which inflates accuracy relative to the realistic case of training and testing on independent studies. In fairness, the authors did guard against leakage at the corpus level by restricting evaluation datasets to studies published after the 2023-05-15 census release, so none appear in scTab; the objection applies to the fine-tuning split alone.\nThe choice of downstream tasks drew the sharpest criticism. Cell-type annotation and batch correction are largely solved problems, so demonstrating that foundation models fail to improve on them is a weak test of the paradigm. The question left standing is what a general-purpose scFM is actually for: if the only tasks that generalise across studies are ones already handled by conventional methods, the biologically interesting questions may be irreducibly study-specific.\nPerturbation response prediction supports that reading. For three of the four compounds tested, every fine-tuned model was outperformed by a baseline predicting no change in expression. Discussion attributed this partly to uncharacterised technical effects in the underlying data, and noted that this is precisely the regime in which robust linear methods should be expected to win.\nThe absence of pre-training learning curves was noted as a gap. A study framed around dataset size and generalisation should report training and validation loss as a function of corpus size and show where the two diverge; the reported downstream F1 curves are only indirect evidence.\nFinally, the authorship was discussed. The view expressed was that a design originating from single-cell specialists would have anticipated most of the limitations above."
+  },
+  {
+    "objectID": "posts/2026-08-18-scfm-pretraining-scale/index.html#transfer-works-for-language-but-maybe-not-for-expression",
+    "href": "posts/2026-08-18-scfm-pretraining-scale/index.html#transfer-works-for-language-but-maybe-not-for-expression",
+    "title": "Pre-training scale in single-cell foundation models",
+    "section": "Transfer works for language but maybe not for expression?",
+    "text": "Transfer works for language but maybe not for expression?\nThe most developed technical argument concerned batch effects. In natural language, batch effects are enumerable — regional variants differ in orthography, idiom and lexical choice — so a sufficiently large corpus contains them all and the model learns to marginalise over them. Transcriptomic batch effects are not enumerable: each operator, day and reagent lot generates a novel effect, so no corpus contains the full space. A review by Jiang was cited as making this argument. A complementary point was raised on target complexity: token combinatorics in language are effectively unbounded, whereas cell-type space is small, and separate ongoing work indicates that roughly 150 features suffice for cell-type prediction. Most genes contribute nothing to the task, so additional data and features dilute rather than sharpen the signal.\nThree constructive directions followed: importing the statistical genetics toolkit (GWAS, fine-mapping, causal inference) rather than relying on scale alone; aligning the pre-training objective with the intended downstream task, for which the paper supplies direct evidence in SCimilarity’s contrastive objective and its correspondingly strong cell-type performance; and moving toward automated experimental design rather than passive accumulation of data."
+  },
+  {
+    "objectID": "posts/2026-08-18-scfm-pretraining-scale/index.html#follow-up-reading",
+    "href": "posts/2026-08-18-scfm-pretraining-scale/index.html#follow-up-reading",
+    "title": "Pre-training scale in single-cell foundation models",
+    "section": "Follow-up reading",
+    "text": "Follow-up reading\nChengyi proposed a companion paper: Rosen Y, Roohani Y, Agrawal A, Samotorčan L, Tabula Sapiens Consortium, Quake SR, Leskovec J. Universal cell embedding provides a foundation model for cell biology. Nature 656:183–191 (2026). doi:10.1038/s41586-026-10689-z\nUCE pursues the same premise — self-supervised pre-training on a large corpus to yield a universal per-cell embedding — but reports strong zero-shot downstream performance without fine-tuning, across 36 million cells and over 1,000 cell types, including generalisation to species absent from training. The apparent contradiction with DenAdel et al. is the reason to read the two together, and turns on evaluation task, corpus composition, and whether the reported gains survive a PCA baseline.\n\nCompiled from the meeting recording. Speaker separation is not available in the room-microphone transcript, so contributions are attributed only where a name was used aloud."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "The MIG journal club is run by Melbourne Integrative Genomics at the University of Melbourne. We read one paper — occasionally a small set — and discuss it properly for an hour.\nPapers are chosen by whoever is presenting. They range across single-cell and multi-omics methods, statistics and causal inference, machine learning for biology, and the occasional paper about how science itself is done. Methodological depth varies deliberately: some weeks are technical, some are conceptual."
+  },
+  {
+    "objectID": "about.html#when-we-meet",
+    "href": "about.html#when-we-meet",
+    "title": "About",
+    "section": "When we meet",
+    "text": "When we meet\nRoughly fortnightly, Tuesdays at 3:30 pm. The room varies; see the next meeting for current details."
+  },
+  {
+    "objectID": "about.html#how-to-join",
+    "href": "about.html#how-to-join",
+    "title": "About",
+    "section": "How to join",
+    "text": "How to join\nAnyone interested is welcome — MIG members, people elsewhere at the University, and visitors. There is no membership and no commitment to attend regularly.\nTo be added to the meeting invitations, contact the journal club organisers.\nYou are welcome to come without having read the paper. Most people have skimmed it; a few have read it closely; the discussion is built to work either way."
+  },
+  {
+    "objectID": "about.html#how-meetings-are-recorded-and-published",
+    "href": "about.html#how-meetings-are-recorded-and-published",
+    "title": "About",
+    "section": "How meetings are recorded and published",
+    "text": "How meetings are recorded and published\nMeetings are audio-recorded and reported on this public site. Please read this section before your first meeting.\n\nThe recording is used only to compile the report, and is not published.\nReports name the presenter, and may name people who proposed follow-up reading. Other contributions are attributed impersonally — “it was noted”, “one attendee argued” — because room microphones do not separate speakers reliably.\nEvery report is reviewed by someone other than its author before it is published. That review checks the science, and also checks that criticism is aimed at the work rather than at the people who did it.\nYou can ask not to be named, before or after a meeting, with no reason needed. Tell an organiser and the attribution is removed.\n\nDiscussion here is often critical, sometimes sharply. That is the point of a journal club. It is published in the spirit of open scientific disagreement, and we try hard to keep it directed at the work. If you are an author of something we have discussed and feel we have got you wrong, open an issue — we will correct it, and you are very welcome to reply."
+  },
+  {
+    "objectID": "about.html#presenting",
+    "href": "about.html#presenting",
+    "title": "About",
+    "section": "Presenting",
+    "text": "Presenting\nPresenting is informal: pick a paper you want to think about, bring it, and lead the discussion. You do not need slides. See contributing if you would like to report on your own session, or propose a paper for someone else to present."
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing",
+    "section": "",
+    "text": "There are three ways to contribute, in increasing order of effort."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#fix-something-one-click",
+    "href": "CONTRIBUTING.html#fix-something-one-click",
+    "title": "Contributing",
+    "section": "1. Fix something — one click",
+    "text": "1. Fix something — one click\nEvery page has an “Edit this page” link in the right-hand margin. Click it and GitHub opens an editor, forks the repository for you, and offers to open a pull request. You do not need to install anything, or know git.\nUse it for typos, broken links, a mangled citation, or a point we recorded wrong. Small corrections are genuinely welcome — nobody will think less of a one-word PR."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#propose-a-paper",
+    "href": "CONTRIBUTING.html#propose-a-paper",
+    "title": "Contributing",
+    "section": "2. Propose a paper",
+    "text": "2. Propose a paper\nOpen a paper proposal. You do not have to present it yourself."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#report-about-the-meeting",
+    "href": "CONTRIBUTING.html#report-about-the-meeting",
+    "title": "Contributing",
+    "section": "3. Report about the meeting",
+    "text": "3. Report about the meeting\nReports are usually drafted from the recording by an organiser and then reviewed by the presenter. If you would rather write your own, do that — it is better.\n\nThe process\n\nCopy _template/ to posts/YYYY-MM-DD-short-slug/ and rename it. The date prefix is a filing convention; the date: field in the front matter is what actually orders the site, so keep the two in sync.\nWrite the report in index.qmd. Fill in every front-matter field.\nOpen a pull request. The PR template has a short checklist — it exists to catch the two things that actually cause problems, copyright and attribution.\nA second person reviews and merges. Never merge your own report. The reviewer checks the science, and checks that criticism reads as being about the work rather than the people.\n\nTo preview locally you need Quarto:\nquarto preview\nThis is optional. Reports are prose, so the GitHub pull request diff is perfectly readable on its own, and CI renders every PR to catch broken YAML.\n\n\nFront matter\n---\ntitle: \"Short descriptive title, not the paper's title\"\ndescription: \"One sentence. Shows in the listing and in link previews.\"\ndate: 2026-08-18\nauthor: \"Presenter Name\"\ncategories: [single-cell, foundation-models, benchmarking]\ndraft: true\n---\ndraft: true hides the report from the listing while you work. Remove it when ready. Note the page still renders — blank — at its final URL while drafting.\nOnce a report is merged, do not rename its folder. The URL is the permanent address people cite and link to.\n\n\nCategories\nPick from this list, so the sidebar stays usable:\nsingle-cell · spatial · multi-omics · microbiome · genomics · statistics · causal-inference · experimental-design · batch-effects · machine-learning · foundation-models · benchmarking · reproducibility · meta-science\nTwo or three per report is plenty. To add a new category, propose it in your PR — the point of a fixed list is that scRNA-seq, scRNAseq and single-cell RNA-seq don’t become three separate entries."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#figures",
+    "href": "CONTRIBUTING.html#figures",
+    "title": "Contributing",
+    "section": "Figures and copyright",
+    "text": "Figures and copyright\nThis is a public repository, so this part matters.\n\nNever commit a PDF of a paper. Link to the DOI.\nDo not screenshot figures from paywalled papers. Reproducing a figure from a closed-access paper on a public website is a copyright breach.\n\nA figure in a report must be one of:\n\nYour own — a schematic you drew, or a plot you made from public data.\nFrom an open-access paper under a CC licence, reproduced with attribution and a link to the source. Check the licence; “free to read” is not the same as “free to reuse”.\nAbsent. Describing a figure in prose is almost always enough, and it is what most of our reports do.\n\nShort quotations from a paper are fine, in quotation marks, with a citation."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#writing-style",
+    "href": "CONTRIBUTING.html#writing-style",
+    "title": "Contributing",
+    "section": "Writing style",
+    "text": "Writing style\nThe house style is narrative prose, not bullet-point minutes. What we are trying to capture is the argument — the objection someone raised, why it mattered, and whether it survived. A reader who was not in the room should be able to follow the reasoning.\n\nSections follow the shape of the discussion, not a fixed template.\nName the presenter and anyone who proposed follow-up reading. Attribute other points impersonally: room microphones do not separate speakers reliably, and people speak more freely knowing that.\nCriticise the work, not the authors. See the code of conduct.\nRecord disagreement that was left unresolved. It is more useful than a tidy consensus that nobody actually reached.\nIf the discussion relied on unpublished or in-progress work by someone in the room, check with them before it goes on a public site.\n\nDo not put internal notes in &lt;!-- HTML comments --&gt;. They are passed straight through into the published page source. Use a ::: {.content-hidden} div instead.\nThe first report is a reasonable model."
+  }
+]
