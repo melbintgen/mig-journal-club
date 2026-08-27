@@ -11,7 +11,7 @@
     "href": "CODE_OF_CONDUCT.html#expected-behaviour",
     "title": "Code of conduct",
     "section": "Expected behaviour",
-    "text": "Expected behaviour\n\nCriticise work, not people. “This design cannot separate cells from donors” is useful. “The authors clearly don’t understand single-cell data” is not.\nAssume good faith. Papers are written under constraints we cannot see, by people who are not in the room to reply.\nMake space. Journal clubs are dominated by whoever is most confident. Presenters and chairs should actively invite quieter attendees in.\nAsk the naive question. If you are lost, others are too, and saying so improves the discussion for everyone."
+    "text": "Expected behaviour\n\nCriticise work, not people. “This design cannot separate cells from donors” is useful. “The authors clearly don’t understand single-cell data” is not.\nAssume good faith. Papers are written under constraints we cannot see, by people who are not present to reply.\nMake space. Journal clubs are dominated by whoever is most confident. Presenters and chairs should actively invite quieter attendees in.\nAsk the naive question. If you are lost, others are too, and saying so improves the discussion for everyone."
   },
   {
     "objectID": "CODE_OF_CONDUCT.html#publication-and-attribution",
@@ -25,7 +25,7 @@
     "href": "CODE_OF_CONDUCT.html#unacceptable-behaviour",
     "title": "Code of conduct",
     "section": "Unacceptable behaviour",
-    "text": "Unacceptable behaviour\nHarassment, discrimination, personal attacks, and dismissive remarks about someone’s background or level of experience are not tolerated, in the room or in this repository."
+    "text": "Unacceptable behaviour\nHarassment, discrimination, personal attacks, and dismissive remarks about someone’s background or level of experience are not tolerated, in meetings or in this repository."
   },
   {
     "objectID": "CODE_OF_CONDUCT.html#reporting",
@@ -165,6 +165,6 @@
     "href": "CONTRIBUTING.html#writing-style",
     "title": "Contributing",
     "section": "Writing style",
-    "text": "Writing style\nThe house style is narrative prose, not bullet-point minutes. What we are trying to capture is the argument — the objection someone raised, why it mattered, and whether it survived. A reader who was not in the room should be able to follow the reasoning.\n\nSections follow the shape of the discussion, not a fixed template.\nName the presenter and anyone who proposed follow-up reading. Attribute other points impersonally: room microphones do not separate speakers reliably, and people speak more freely knowing that.\nCriticise the work, not the authors. See the code of conduct.\nRecord disagreement that was left unresolved. It is more useful than a tidy consensus that nobody actually reached.\nIf the discussion relied on unpublished or in-progress work by someone in the room, check with them before it goes on a public site.\n\nDo not put internal notes in &lt;!-- HTML comments --&gt;. They are passed straight through into the published page source. Use a ::: {.content-hidden} div instead.\nThe first report is a reasonable model."
+    "text": "Writing style\nThe house style is narrative prose, not bullet-point minutes. What we are trying to capture is the argument — the objection someone raised, why it mattered, and whether it survived. A reader who did not attend should be able to follow the reasoning.\n\nSections follow the shape of the discussion, not a fixed template.\nName the presenter and anyone who proposed follow-up reading. Attribute other points impersonally: room microphones do not separate speakers reliably, and people speak more freely knowing that.\nCriticise the work, not the authors. See the code of conduct.\nRecord disagreement that was left unresolved. It is more useful than a tidy consensus that nobody actually reached.\nIf the discussion relied on unpublished or in-progress work by someone who attended, check with them before it goes on a public site.\n\nDo not put internal notes in &lt;!-- HTML comments --&gt;. They are passed straight through into the published page source. Use a ::: {.content-hidden} div instead.\nThe first report is a reasonable model."
   }
 ]
