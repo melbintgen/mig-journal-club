@@ -5,10 +5,10 @@
 
 
 <!-- ─────────────────────────────────────────────────────────────────────
-     The rest applies to NEW MEETING WRITE-UPS only. Delete for small fixes.
+     The rest applies to NEW MEETING REPORTS only. Delete for small fixes.
      ───────────────────────────────────────────────────────────────────── -->
 
-## Write-up checklist
+## Meeting report checklist
 
 **Attribution and consent**
 
@@ -17,7 +17,7 @@
 - [ ] Criticism reads as being about the *work*, not about the authors as people
 - [ ] Any unpublished or in-progress work mentioned has been cleared with whoever owns it
 
-**Copyright** — see [contributing](../contributing.qmd#figures)
+**Copyright** — see [contributing](../CONTRIBUTING.md#figures)
 
 - [ ] No paper PDFs committed
 - [ ] Every figure is my own, or from an open-access paper under a CC licence with attribution
@@ -26,7 +26,7 @@
 **Mechanics**
 
 - [ ] `date:` in the front matter matches the folder-name prefix
-- [ ] Categories are from the list in [contributing](../contributing.qmd)
+- [ ] Categories are from the list in [contributing](../CONTRIBUTING.md)
 - [ ] `description:` is filled in — it drives the listing and link previews
 - [ ] `draft: true` removed
 - [ ] The slug is final. **Once merged the URL is permanent.**

@@ -30,15 +30,15 @@ it; a few have read it closely; the discussion is built to work either way.
 
 ## How meetings are recorded and published
 
-**Meetings are audio-recorded and written up on this public site.** Please read
+**Meetings are audio-recorded and reported on this public site.** Please read
 this section before your first meeting.
 
-- The recording is used only to compile the write-up, and is not published.
-- Write-ups name the **presenter**, and may name people who proposed follow-up
+- The recording is used only to compile the report, and is not published.
+- Reports name the **presenter**, and may name people who proposed follow-up
   reading. Other contributions are attributed impersonally — "it was noted",
   "one attendee argued" — because room microphones do not separate speakers
   reliably.
-- Every write-up is reviewed by someone other than its author before it is
+- Every report is reviewed by someone other than its author before it is
   published. That review checks the science, and also checks that criticism is
   aimed at the work rather than at the people who did it.
 - **You can ask not to be named**, before or after a meeting, with no reason
@@ -55,6 +55,6 @@ will correct it, and you are very welcome to reply.
 
 Presenting is informal: pick a paper you want to think about, bring it, and lead
 the discussion. You do not need slides. See
-[contributing](contributing.qmd) if you would like to write up your own session,
+[contributing](CONTRIBUTING.md) if you would like to report on your own session,
 or [propose a paper](https://github.com/melbintgen/mig-journal-club/issues/new?template=propose-paper.yml)
 for someone else to present.

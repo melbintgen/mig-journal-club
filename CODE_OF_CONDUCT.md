@@ -19,16 +19,16 @@ expectations apply to meetings, to this repository, and to anything published he
 
 ## Publication and attribution
 
-Meetings are written up and published on this public site. Because of that:
+Meetings are reported and published on this public site. Because of that:
 
-- Write-ups name the presenter, and may name people who proposed follow-up
+- Reports name the presenter, and may name people who proposed follow-up
   reading. Discussion points are otherwise attributed impersonally.
 - **You can ask not to be named.** Tell the organisers, before or after the
   meeting, and we will remove the attribution. No reason needed.
-- Criticism published here is directed at the work. Before a write-up is merged
+- Criticism published here is directed at the work. Before a report is merged
   it is reviewed by someone other than its author, partly to check this.
 
-See [contributing](contributing.qmd) for the full write-up process.
+See [contributing](CONTRIBUTING.md) for the full reporting process.
 
 ## Unacceptable behaviour
 

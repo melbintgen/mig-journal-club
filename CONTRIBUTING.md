@@ -18,9 +18,9 @@ Small corrections are genuinely welcome — nobody will think less of a one-word
 Open a [paper proposal](https://github.com/melbintgen/mig-journal-club/issues/new?template=propose-paper.yml).
 You do not have to present it yourself.
 
-## 3. Write up a meeting
+## 3. Report about the meeting
 
-Write-ups are usually drafted from the recording by an organiser and then reviewed
+Reports are usually drafted from the recording by an organiser and then reviewed
 by the presenter. If you would rather write your own, do that — it is better.
 
 ### The process
@@ -28,11 +28,11 @@ by the presenter. If you would rather write your own, do that — it is better.
 1. **Copy `_template/`** to `posts/YYYY-MM-DD-short-slug/` and rename it. The date
    prefix is a filing convention; the `date:` field in the front matter is what
    actually orders the site, so keep the two in sync.
-2. **Write the post** in `index.qmd`. Fill in every front-matter field.
+2. **Write the report** in `index.qmd`. Fill in every front-matter field.
 3. **Open a pull request.** The PR template has a short checklist — it exists to
    catch the two things that actually cause problems, copyright and attribution.
-4. **A second person reviews and merges.** Never merge your own write-up. The
-   reviewer checks the science and checks that criticism reads as being about the
+4. **A second person reviews and merges.** Never merge your own report. The
+   reviewer checks the science, and checks that criticism reads as being about the
    work rather than the people.
 
 To preview locally you need [Quarto](https://quarto.org/docs/get-started/):
@@ -41,7 +41,7 @@ To preview locally you need [Quarto](https://quarto.org/docs/get-started/):
 quarto preview
 ```
 
-This is optional. Posts are prose, so the GitHub pull request diff is perfectly
+This is optional. Reports are prose, so the GitHub pull request diff is perfectly
 readable on its own, and CI renders every PR to catch broken YAML.
 
 ### Front matter
@@ -57,10 +57,10 @@ draft: true
 ---
 ```
 
-`draft: true` hides the post from the listing while you work. Remove it when
+`draft: true` hides the report from the listing while you work. Remove it when
 ready. Note the page still renders — blank — at its final URL while drafting.
 
-**Once a post is merged, do not rename its folder.** The URL is the permanent
+**Once a report is merged, do not rename its folder.** The URL is the permanent
 address people cite and link to.
 
 ### Categories
@@ -72,7 +72,7 @@ Pick from this list, so the sidebar stays usable:
 `machine-learning` · `foundation-models` · `benchmarking` · `reproducibility` ·
 `meta-science`
 
-Two or three per post is plenty. To add a new category, propose it in your PR —
+Two or three per report is plenty. To add a new category, propose it in your PR —
 the point of a fixed list is that `scRNA-seq`, `scRNAseq` and `single-cell RNA-seq`
 don't become three separate entries.
 
@@ -84,14 +84,14 @@ This is a public repository, so this part matters.
 - **Do not screenshot figures from paywalled papers.** Reproducing a figure from a
   closed-access paper on a public website is a copyright breach.
 
-A figure in a post must be one of:
+A figure in a report must be one of:
 
 1. **Your own** — a schematic you drew, or a plot you made from public data.
 2. **From an open-access paper under a CC licence**, reproduced with attribution
    and a link to the source. Check the licence; "free to read" is not the same as
    "free to reuse".
 3. **Absent.** Describing a figure in prose is almost always enough, and it is
-   what most of our posts do.
+   what most of our reports do.
 
 Short quotations from a paper are fine, in quotation marks, with a citation.
 
@@ -113,4 +113,7 @@ reasoning.
 - If the discussion relied on unpublished or in-progress work by someone in the
   room, check with them before it goes on a public site.
 
-The [first post](posts/2026-08-18-scfm-pretraining-scale/) is a reasonable model.
+Do not put internal notes in `<!-- HTML comments -->`. They are passed straight
+through into the published page source. Use a `::: {.content-hidden}` div instead.
+
+The [first report](posts/2026-08-18-scfm-pretraining-scale/) is a reasonable model.

@@ -5,19 +5,19 @@ journal club at the University of Melbourne.
 
 **→ [melbintgen.github.io/mig-journal-club](https://melbintgen.github.io/mig-journal-club/)**
 
-This repository holds the source for that site. Each meeting gets a write-up:
-what the paper claimed, what the room made of it, and what was left unresolved.
+This repository holds the source for that site. Each meeting gets a report: what
+the paper claimed, what the room made of it, and what was left unresolved.
 
 ## Contributing
 
 - **Spotted an error?** Use the "Edit this page" link in the margin of any page.
   GitHub forks the repo and opens a pull request for you — no git, no local setup.
 - **Want to suggest a paper?** [Open a proposal](https://github.com/melbintgen/mig-journal-club/issues/new?template=propose-paper.yml).
-- **Writing up a meeting?** Copy `_template/` to `posts/YYYY-MM-DD-slug/` and open
-  a PR. See [contributing.qmd](contributing.qmd) for the full process, the category
-  list, and the rules on figures.
+- **Reporting about a meeting?** Copy `_template/` to `posts/YYYY-MM-DD-slug/` and
+  open a PR. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full process, the
+  category list, and the rules on figures.
 
-Meetings are recorded and written up publicly. Attendees can ask not to be named —
+Meetings are recorded and reported publicly. Attendees can ask not to be named —
 see [about.qmd](about.qmd).
 
 ## Building locally
@@ -36,7 +36,7 @@ without an R or Python toolchain.
 
 | | |
 |---|---|
-| Write-ups under `posts/`, and the site prose | [CC BY 4.0](LICENSE) |
+| Reports under `posts/`, and the site prose | [CC BY 4.0](LICENSE) |
 | Configuration, styles, workflows, templates | [MIT](LICENSE-CODE) |
 
 © 2026 Melbourne Integrative Genomics, University of Melbourne.

@@ -1,6 +1,6 @@
 # Outstanding before / just after launch
 
-This file starts with `_`, so Quarto never renders it. It is safe to keep notes
+This file starts with `_`, so Quarto never renders it. Safe to keep notes
 here that shouldn't be published.
 
 **Do not put internal notes in `<!-- HTML comments -->` inside `.qmd` files.**
@@ -31,7 +31,7 @@ them with View Source. Use a `::: {.content-hidden}` div, or this file.
 
 ## Review
 
-- [ ] **Jiadong to validate the 18 Aug write-up** once the site is up.
+- [ ] **Jiadong to validate the 18 Aug report** once the site is up.
 - [ ] Consider whether `statgen-journal-club` should be archived or point here —
       two journal club sites under one org with no signal about which is current.
 

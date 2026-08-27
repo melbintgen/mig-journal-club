@@ -22,7 +22,7 @@ website:
       - text: "Meetings"
         href: index.qmd
       - about.qmd
-      - contributing.qmd
+      - CONTRIBUTING.md
     right:
       - text: "Propose a paper"
         href: https://github.com/melbintgen/mig-journal-club/issues/new?template=propose-paper.yml
@@ -36,7 +36,7 @@ website:
       - text: "Code of conduct"
         href: CODE_OF_CONDUCT.md
       - text: "Contributing"
-        href: contributing.qmd
+        href: CONTRIBUTING.md
 
 format:
   html:

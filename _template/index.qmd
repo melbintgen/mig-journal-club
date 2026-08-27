@@ -1,60 +1,35 @@
 ---
-# Copy this whole folder to posts/YYYY-MM-DD-short-slug/ and edit.
-# Anything under a folder starting with "_" is invisible to Quarto, so this
-# template never appears on the site.
-
-title: "Short descriptive title, not the paper's title"
-description: "One sentence. Shows in the listing and in link previews — make it say what was actually found or argued."
-date: 2026-01-01          # ISO. Keep in sync with the folder name prefix.
-author: "Presenter Name"  # The presenter, so it surfaces in the listing.
-categories: [pick, from, contributing.qmd]
-draft: true               # Remove when ready to publish.
+title: ""
+description: ""
+date: 2026-01-01
+author: ""
+categories: []
+draft: true
 ---
 
 ::: {.callout-note appearance="simple"}
-**Paper.** Author A, Author B, Author C. *Title of the paper.* Journal
-volume:pages (year). [doi:10.xxxx/yyyyy](https://doi.org/10.xxxx/yyyyy)
+**Paper.** Authors. *Title.* Journal volume:pages (year).
+[doi:10.xxxx/yyyyy](https://doi.org/10.xxxx/yyyyy)
 
-**Presented by** Presenter Name · **1 January 2026**
+**Presented by** Name · **1 January 2026**
 :::
 
-## The study
-
-What the paper set out to do, what they did, and what they found. Two or three
-paragraphs. Enough that someone who has not read it can follow the discussion
-below.
+## The paper
 
 ## Discussion
 
-Sections from here follow the shape of the actual discussion — there is no fixed
-template. Common ones are "Criticisms", "Terminology clarified in discussion", or
-a heading naming the single argument that dominated.
-
-Write narrative prose, not bullet-point minutes. Capture the *argument*: the
-objection someone raised, why it mattered, and whether it survived. Record
-disagreement that was left unresolved — it is more useful than a tidy consensus
-nobody actually reached.
-
-Name the presenter and anyone who proposed follow-up reading. Attribute other
-points impersonally: "it was noted", "one attendee argued".
-
-Criticise the work, not the authors.
-
-::: {.content-hidden}
-Figures: only your own, or from an open-access paper under a CC licence with
-attribution. Never screenshot a figure from a paywalled paper. Describing it in
-prose is usually enough. See contributing.qmd#figures.
-
-Note: this block is `.content-hidden`, so it never reaches the rendered page.
-Plain `<!-- HTML comments -->` DO appear in the page source — don't use them for
-anything you would not publish.
-:::
-
 ## Follow-up reading
-
-Anything the room suggested reading next, with a full citation and DOI, and a
-sentence on why it is worth reading alongside this one.
 
 ---
 
 *Compiled from the meeting recording. Speaker separation is not available in the room-microphone transcript, so contributions are attributed only where a name was used aloud.*
+
+::: {.content-hidden}
+Copy this folder to posts/YYYY-MM-DD-short-slug/ and rename it.
+Keep `date:` in sync with the folder name. Categories, figure rules and house
+style are in CONTRIBUTING.md. Add headings as the discussion needs them — these
+three are a starting point, not a form to fill in.
+
+This block is `.content-hidden`, so it never reaches the published page.
+Plain <!-- HTML comments --> DO appear in the page source.
+:::

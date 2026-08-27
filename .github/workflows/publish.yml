@@ -17,7 +17,9 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # quarto-actions/publish requires checkout@v6 or later; older versions
+      # fail with a credentials error when it pushes to gh-pages.
+      - uses: actions/checkout@v6
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
