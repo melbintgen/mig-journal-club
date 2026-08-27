@@ -7,33 +7,32 @@ here that shouldn't be published.
 Pandoc passes them straight through into the page source, where anyone can read
 them with View Source. Use a `::: {.content-hidden}` div, or this file.
 
-## Needs a real value
+## Settled
 
-- [ ] **Venue for 1 Sept** — `index.qmd` currently says "venue to be confirmed".
-- [ ] **Standing cadence and usual room** — `about.qmd` says "roughly fortnightly,
-      Tuesdays at 3:30 pm". Confirm.
-- [ ] **Contact point for joining** — `about.qmd` says "contact the journal club
-      organisers". Needs a name or a role address.
+- [x] **Venue** — Room 124, Building 184. On `index.qmd` and `about.qmd`.
+- [x] **Cadence** — monthly, Tuesdays 3:30 pm.
+- [x] **Contact for joining** — Jiadong Mao, named on `about.qmd` with no email.
       **The mailing list address is deliberately not published on the site.**
+- [x] **MIG brand colour** — `$mig-blue: #094183` in `styles.scss` confirmed.
+
+## Still open
+
 - [ ] **CODEOWNERS** — `.github/CODEOWNERS` is commented out pending real GitHub
-      usernames for the organisers.
-- [ ] **MIG brand colour** — `styles.scss` uses `$mig-blue: #094183` as a guess.
+      usernames for Kim-Anh and Jiadong. An unrecognised username there fails
+      silently: GitHub just never requests the review, with no error.
+- [ ] **Jiadong to validate the 18 Aug report** now the site is up.
+- [ ] Consider whether `statgen-journal-club` should be archived or point here —
+      two journal club sites under one org with no signal about which is current.
 
 ## Repo settings (GitHub web UI, needs org admin)
 
-- [ ] Create `melbintgen/mig-journal-club`, public, **empty** (no README/licence/
-      gitignore — they would conflict with this scaffold's first commit)
-- [ ] Settings → Actions → General → Workflow permissions → **Read and write**
-      *(do this before the first push, or `publish.yml` fails on its first run)*
-- [ ] After the first successful publish: Settings → Pages → source = `gh-pages`
+- [x] Create `melbintgen/mig-journal-club`, public, empty
+- [x] Settings → Actions → General → Workflow permissions → **Read and write**
+- [x] `gh-pages` branch created (orphan commit pushed manually — the publish
+      action requires it to exist before CI can run)
+- [ ] Settings → Pages → source = `gh-pages`, folder `/ (root)`
 - [ ] Branch protection on `main`: require a PR + one approving review, allow
       admin bypass. This is what actually enforces "someone else merges".
-
-## Review
-
-- [ ] **Jiadong to validate the 18 Aug report** once the site is up.
-- [ ] Consider whether `statgen-journal-club` should be archived or point here —
-      two journal club sites under one org with no signal about which is current.
 
 ## Later
 

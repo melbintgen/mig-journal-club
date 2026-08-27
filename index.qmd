@@ -19,7 +19,7 @@ unresolved. New members and visitors are welcome.
 ::: {.next-meeting}
 ### Next meeting
 
-**Tuesday 1 September 2026, 3:30 pm** · *venue to be confirmed*
+**Tuesday 1 September 2026, 3:30 pm** · Room 124, Building 184
 
 **Jiadong** will discuss several papers that shaped how he thinks about the way
 causal questions are posed in causal inference.
