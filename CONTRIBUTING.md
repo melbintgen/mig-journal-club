@@ -99,7 +99,7 @@ Short quotations from a paper are fine, in quotation marks, with a citation.
 
 The house style is narrative prose, not bullet-point minutes. What we are trying
 to capture is the *argument* — the objection someone raised, why it mattered, and
-whether it survived. A reader who was not in the room should be able to follow the
+whether it survived. A reader who did not attend should be able to follow the
 reasoning.
 
 - Sections follow the shape of the discussion, not a fixed template.
@@ -110,8 +110,8 @@ reasoning.
   [code of conduct](CODE_OF_CONDUCT.md).
 - Record disagreement that was left unresolved. It is more useful than a tidy
   consensus that nobody actually reached.
-- If the discussion relied on unpublished or in-progress work by someone in the
-  room, check with them before it goes on a public site.
+- If the discussion relied on unpublished or in-progress work by someone who
+  attended, check with them before it goes on a public site.
 
 Do not put internal notes in `<!-- HTML comments -->`. They are passed straight
 through into the published page source. Use a `::: {.content-hidden}` div instead.

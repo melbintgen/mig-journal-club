@@ -11,7 +11,7 @@ expectations apply to meetings, to this repository, and to anything published he
 - **Criticise work, not people.** "This design cannot separate cells from donors"
   is useful. "The authors clearly don't understand single-cell data" is not.
 - **Assume good faith.** Papers are written under constraints we cannot see, by
-  people who are not in the room to reply.
+  people who are not present to reply.
 - **Make space.** Journal clubs are dominated by whoever is most confident.
   Presenters and chairs should actively invite quieter attendees in.
 - **Ask the naive question.** If you are lost, others are too, and saying so
@@ -33,7 +33,7 @@ See [contributing](CONTRIBUTING.md) for the full reporting process.
 ## Unacceptable behaviour
 
 Harassment, discrimination, personal attacks, and dismissive remarks about
-someone's background or level of experience are not tolerated, in the room or in
+someone's background or level of experience are not tolerated, in meetings or in
 this repository.
 
 ## Reporting

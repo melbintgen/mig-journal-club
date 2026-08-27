@@ -2,7 +2,7 @@
 title: "Pre-training scale in single-cell foundation models"
 description: "The paper reports that performance saturates at ~1% of a 22-million-cell corpus, and plain PCA matches or beats every foundation model tested. Was there a flaw in the study design?"
 date: 2026-08-18
-author: "Meeting summary"
+author: ""
 categories: [single-cell, foundation-models, benchmarking, machine-learning]
 ---
 
