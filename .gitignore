@@ -1,0 +1,13 @@
+# Quarto build output
+/_site/
+/.quarto/
+*_files/
+
+# NOTE: _freeze/ is deliberately NOT ignored. It is committed so CI can render
+# without an R/Python toolchain, and so fork PRs never execute code on the runner.
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+**/*.quarto_ipynb

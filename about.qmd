@@ -1,0 +1,60 @@
+---
+title: "About"
+toc: false
+---
+
+The MIG journal club is run by
+[Melbourne Integrative Genomics](https://research.unimelb.edu.au/integrative-genomics)
+at the University of Melbourne. We read one paper — occasionally a small set —
+and discuss it properly for an hour.
+
+Papers are chosen by whoever is presenting. They range across single-cell and
+multi-omics methods, statistics and causal inference, machine learning for
+biology, and the occasional paper about how science itself is done. Methodological
+depth varies deliberately: some weeks are technical, some are conceptual.
+
+## When we meet
+
+Roughly fortnightly, Tuesdays at 3:30 pm. The room varies; see the
+[next meeting](index.qmd) for current details.
+
+## How to join
+
+Anyone interested is welcome — MIG members, people elsewhere at the University,
+and visitors. There is no membership and no commitment to attend regularly.
+
+To be added to the meeting invitations, contact the journal club organisers.
+
+You are welcome to come without having read the paper. Most people have skimmed
+it; a few have read it closely; the discussion is built to work either way.
+
+## How meetings are recorded and published
+
+**Meetings are audio-recorded and written up on this public site.** Please read
+this section before your first meeting.
+
+- The recording is used only to compile the write-up, and is not published.
+- Write-ups name the **presenter**, and may name people who proposed follow-up
+  reading. Other contributions are attributed impersonally — "it was noted",
+  "one attendee argued" — because room microphones do not separate speakers
+  reliably.
+- Every write-up is reviewed by someone other than its author before it is
+  published. That review checks the science, and also checks that criticism is
+  aimed at the work rather than at the people who did it.
+- **You can ask not to be named**, before or after a meeting, with no reason
+  needed. Tell an organiser and the attribution is removed.
+
+Discussion here is often critical, sometimes sharply. That is the point of a
+journal club. It is published in the spirit of open scientific disagreement, and
+we try hard to keep it directed at the work. If you are an author of something we
+have discussed and feel we have got you wrong,
+[open an issue](https://github.com/melbintgen/mig-journal-club/issues/new) — we
+will correct it, and you are very welcome to reply.
+
+## Presenting
+
+Presenting is informal: pick a paper you want to think about, bring it, and lead
+the discussion. You do not need slides. See
+[contributing](contributing.qmd) if you would like to write up your own session,
+or [propose a paper](https://github.com/melbintgen/mig-journal-club/issues/new?template=propose-paper.yml)
+for someone else to present.

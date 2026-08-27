@@ -1,0 +1,59 @@
+/*-- scss:defaults --*/
+
+// MIG palette. Adjust $mig-blue to the official brand colour when you have it.
+$mig-blue:   #094183;
+$mig-accent: #00796b;
+
+$primary:    $mig-blue;
+$link-color: $mig-blue;
+
+// Prose-heavy site: wider measure than Bootstrap's default, but still capped so
+// lines don't run to 200 characters on a wide monitor.
+$font-size-root:   17px;
+$line-height-base: 1.65;
+
+/*-- scss:rules --*/
+
+// Cap the reading measure on post bodies.
+main.content {
+  max-width: 46rem;
+}
+
+// The paper callout at the top of every post: quieter than a default callout,
+// so it reads as a citation block rather than a warning.
+.callout.callout-note.callout-style-simple {
+  border-left-color: $mig-accent;
+}
+
+// Listing: make the date secondary and the title do the work.
+.quarto-listing .listing-date {
+  opacity: 0.65;
+  font-variant-numeric: tabular-nums;
+}
+
+.quarto-listing .listing-title {
+  font-weight: 600;
+}
+
+// Categories as quiet pills rather than shouty badges.
+.quarto-category {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+// Next-meeting block on the landing page.
+.next-meeting {
+  border: 1px solid rgba(9, 65, 131, 0.25);
+  border-left: 4px solid $mig-blue;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.next-meeting h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}

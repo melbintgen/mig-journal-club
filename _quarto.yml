@@ -1,0 +1,53 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "MIG Journal Club"
+  site-url: https://melbintgen.github.io/mig-journal-club/
+  description: "Readings and discussion from the Melbourne Integrative Genomics journal club."
+  repo-url: https://github.com/melbintgen/mig-journal-club
+  repo-branch: main
+  # "Edit this page" is the primary way people contribute: one click opens the
+  # GitHub web editor on a fork and offers a PR.
+  repo-actions: [edit, issue]
+  open-graph: true
+  twitter-card:
+    card-style: summary_large_image
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    left:
+      - text: "Meetings"
+        href: index.qmd
+      - about.qmd
+      - contributing.qmd
+    right:
+      - text: "Propose a paper"
+        href: https://github.com/melbintgen/mig-journal-club/issues/new?template=propose-paper.yml
+      - icon: rss
+        href: index.xml
+      - icon: github
+        href: https://github.com/melbintgen/mig-journal-club
+  page-footer:
+    left: "© 2026 Melbourne Integrative Genomics, University of Melbourne · text CC BY 4.0, code MIT"
+    right:
+      - text: "Code of conduct"
+        href: CODE_OF_CONDUCT.md
+      - text: "Contributing"
+        href: contributing.qmd
+
+format:
+  html:
+    theme:
+      light: [litera, styles.scss]
+      dark: [darkly, styles.scss]
+    toc: true
+    code-copy: true
+    anchor-sections: true
+    link-external-newwindow: true
+
+execute:
+  # Keeps CI free of R/Python and stops fork PRs executing code on the runner.
+  freeze: auto

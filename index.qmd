@@ -1,0 +1,47 @@
+---
+title: "MIG Journal Club"
+subtitle: "Readings and discussion from Melbourne Integrative Genomics"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  fields: [date, title, description, author, categories]
+  categories: true
+  feed: true
+  sort-ui: false
+  filter-ui: true
+---
+
+We meet to read one paper properly rather than five badly. Each meeting is written
+up here — what the paper claimed, what the room made of it, and what stayed
+unresolved. New members and visitors are welcome.
+
+::: {.next-meeting}
+### Next meeting
+
+**Tuesday 1 September 2026, 3:30 pm** · *venue to be confirmed*
+
+**Jiadong** will discuss several papers that shaped how he thinks about the way
+causal questions are posed in causal inference.
+
+- Swales J. *The troublesome search for evidence: three cultures in need of
+  integration.* J R Soc Med 93(8):402–407 (2000).
+  [doi:10.1177/014107680009300804](https://doi.org/10.1177/014107680009300804) —
+  a high-level, somewhat philosophical discussion of what counts as scientific
+  evidence.
+- Lu H, Li F, Lesko CR, *et al.* *Four targets: an enhanced framework for guiding
+  causal inference from observational data.* Int J Epidemiol 54(1) (2025).
+  [doi:10.1093/ije/dyaf003](https://doi.org/10.1093/ije/dyaf003) — a review
+  defining the key concepts in formulating a causal question from observational
+  data.
+- Dickerman BA, García-Albéniz X, Logan RW, Denaxas S, Hernán MA. *Avoidable
+  flaws in observational analyses: an application to statins and cancer.* Nat Med
+  25(10):1601–1606 (2019).
+  [doi:10.1038/s41591-019-0597-x](https://doi.org/10.1038/s41591-019-0597-x) — a
+  classic paper resolving an apparent conflict between observational studies and
+  meta-analyses of trials by designing the causal task properly.
+
+Reading all three is not expected. Come anyway.
+:::
+
+## Past meetings

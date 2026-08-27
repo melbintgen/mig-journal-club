@@ -1,0 +1,11 @@
+# Auto-requests a review from the organisers on every pull request.
+#
+# TODO: uncomment and replace with real GitHub usernames (or a @melbintgen/<team>
+# team slug). Left commented because an unrecognised username here fails silently
+# — GitHub just never requests the review, with no error.
+#
+# Reminder: the write-up process requires that someone OTHER than the author
+# merges. CODEOWNERS only requests the review; it does not enforce that.
+# Branch protection on `main` is what enforces it.
+
+# *   @kimanh-username @jiadong-username

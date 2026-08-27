@@ -1,0 +1,14 @@
+# Blank issues stay ENABLED on purpose: `repo-actions: [issue]` in _quarto.yml puts
+# a "Report an issue" link on every page, and that link opens a blank issue. It is
+# also how we invite authors of papers we've discussed to reply. Disabling blank
+# issues would break both.
+blank_issues_enabled: true
+
+contact_links:
+  - name: About the journal club
+    url: https://melbintgen.github.io/mig-journal-club/about.html
+    about: When we meet, how to join, and how meetings are recorded and published.
+
+  - name: Fix a typo or error in a write-up
+    url: https://melbintgen.github.io/mig-journal-club/
+    about: Use the "Edit this page" link in the margin of any page — GitHub opens a pull request for you. No issue needed.

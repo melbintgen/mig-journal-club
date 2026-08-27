@@ -1,0 +1,17 @@
+# Shared settings for every post. Categories are deliberately NOT here — they are
+# per-post, and setting them here would apply the same categories to everything.
+toc: true
+toc-depth: 3
+title-block-banner: true
+
+# Comments are off at launch. If we ever enable giscus, it drops in here:
+#
+# comments:
+#   giscus:
+#     repo: melbintgen/mig-journal-club
+#     repo-id: "<from giscus.app>"
+#     category: Announcements
+#     category-id: "<from giscus.app>"
+#     mapping: pathname       # keys comments to the URL — never rename a published slug
+#     reactions-enabled: true
+#     loading: lazy

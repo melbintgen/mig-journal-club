@@ -1,0 +1,56 @@
+name: Propose a paper
+description: Suggest something for a future journal club meeting
+title: "[Paper] "
+labels: ["paper proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You do not need to present it yourself — proposing is useful on its own.
+
+  - type: input
+    id: citation
+    attributes:
+      label: Paper
+      description: Title and authors, or just a DOI / PubMed link.
+      placeholder: "Dickerman BA, et al. Avoidable flaws in observational analyses. Nat Med 2019. doi:10.1038/s41591-019-0597-x"
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this one?
+      description: >
+        A couple of sentences. What would we argue about? A paper that is simply
+        good is less useful here than one that is contestable, or that changed how
+        you think about a problem.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: present
+    attributes:
+      label: Would you present it?
+      options:
+        - "Yes, happy to present"
+        - "Yes, but I'd want a co-presenter"
+        - "No — suggesting it for someone else"
+        - "Not sure yet"
+    validations:
+      required: true
+
+  - type: input
+    id: access
+    attributes:
+      label: Open access?
+      description: >
+        Optional. If it's paywalled, say so — it affects whether people can read
+        it beforehand.
+      placeholder: "Open access / paywalled / preprint available"
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Related papers, background reading, or a date that would suit you.
