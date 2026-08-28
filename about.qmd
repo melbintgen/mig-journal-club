@@ -8,10 +8,15 @@ The MIG journal club is run by
 at the University of Melbourne. We read one paper — occasionally a small set —
 and discuss it properly for an hour.
 
-Papers are chosen by whoever is presenting. They range across single-cell and
-multi-omics methods, statistics and causal inference, machine learning for
-biology, and the occasional paper about how science itself is done. Methodological
-depth varies deliberately: some weeks are technical, some are conceptual.
+Papers are chosen mainly by whoever is presenting. We will also discuss towards the end of each session what papers the audience what to see. Example topics include (not limited to): 
+
+- single-cell and spatial omics; 
+- multi-omics integration; 
+- methods in microbiology, ecology and marine sciences; 
+- statistical and causal inference;
+- machine learning for biology;
+- 'meta-science' (how science is done). 
+
 
 ## When we meet
 
@@ -20,30 +25,33 @@ Monthly, on a Tuesday at 3:30 pm, in Room 124, Building 184. See the
 
 ## How to join
 
-Anyone interested is welcome — MIG members, people elsewhere at the University,
-and visitors. There is no membership and no commitment to attend regularly.
+Anyone interested is welcome — MIG members, people elsewhere at the University and affiliated institutes,
+visitors. There is no membership and no commitment to attend regularly.
 
-To be added to the meeting invitations, contact **Jiadong Mao**.
+To be added to the meeting invitations, contact [**Jiadong Mao**](mailto:jiadong.mao@unimelb.edu.au).
+
+
+## Do I need to read the paper before the session?
 
 You are welcome to come without having read the paper. Most people have skimmed
 it; a few have read it closely; the discussion is built to work either way.
 
 ## How meetings are recorded and published
 
-**Meetings are audio-recorded and reported on this public site.** Please read
+**Meetings are audio-recorded for edited transcripts to be published.** Please read
 this section before your first meeting.
 
-- The recording is used only to compile the report, and is not published.
+- The recording is used only to compile the report, and the recording itself is not published.
 - Reports name the **presenter**, and may name people who proposed follow-up
-  reading. Other contributions are attributed impersonally — "it was noted",
-  "one attendee argued" — because room microphones do not separate speakers
+  reading. Other contributions are attributed anonymously — "it was noted",
+  "one attendee argued" — because room microphones do not always separate speakers
   reliably.
 - Every report is reviewed by someone other than its author before it is
   published. That review checks the science, and also checks that criticism is
   aimed at the work rather than at the people who did it.
 - **You can ask not to be named**, before or after a meeting, with no reason
-  needed. Tell an organiser and the attribution is removed.
-
+  needed. Tell an organiser and the attribution is removed. (You can also pick a pseudonym, say Socrates.)
+  
 Discussion here is often critical, sometimes sharply. That is the point of a
 journal club. It is published in the spirit of open scientific disagreement, and
 we try hard to keep it directed at the work. If you are an author of something we
@@ -54,7 +62,7 @@ will correct it, and you are very welcome to reply.
 ## Presenting
 
 Presenting is informal: pick a paper you want to think about, bring it, and lead
-the discussion. You do not need slides. See
+the discussion. You do not need slides, although slides are recommended. See
 [contributing](CONTRIBUTING.md) if you would like to report on your own session,
 or [propose a paper](https://github.com/melbintgen/mig-journal-club/issues/new?template=propose-paper.yml)
 for someone else to present.
