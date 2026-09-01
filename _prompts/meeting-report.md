@@ -7,7 +7,9 @@ example — read it before using this.
 `_prompts/` starts with `_`, so Quarto never renders it. Safe for internal notes.
 
 **How to use:** attach the transcript(s), fill in the four bracketed fields at the
-top, paste the rest verbatim.
+top, paste the rest verbatim. The output format lives in `_template/index.qmd`,
+not here — this prompt points at it rather than restating it, so the two cannot
+drift apart.
 
 ---
 
@@ -72,45 +74,32 @@ VERIFY — do not trust the transcript
   against the paper itself, not against the transcript.
 - List at the end anything you could not verify, so I can check it.
 
-OUTPUT — one Quarto file, ready to drop in at
-posts/YYYY-MM-DD-short-slug/index.qmd
+OUTPUT — one Quarto file at posts/YYYY-MM-DD-short-slug/index.qmd
 
----
-title: "Short descriptive title — the topic, NOT the paper's title"
-description: "One sentence: what the paper claims, then the open question the
-  discussion left standing. Drives the site listing, link previews and RSS.
-  Must be a single line."
-date: YYYY-MM-DD
-author: ""
-categories: [two to four, from the list below]
----
+Start from the repository's template, which is the canonical skeleton:
+https://github.com/melbintgen/mig-journal-club/blob/main/_template/index.qmd
+(or `_template/index.qmd` in a local clone).
 
-::: {.callout-note appearance="simple"}
-**Paper.** Full citation. *Title in italics.* Journal volume:pages (year).
-[doi:10.xxxx/yyyyy](https://doi.org/10.xxxx/yyyyy)
+Keep its front-matter fields, its paper callout block and its closing note
+exactly as they are. Do not invent a different structure. If the template and
+this prompt ever disagree, the template wins — it is the file contributors
+actually copy.
 
-**Presented by** Name · **D Month YYYY**
-:::
+Filling it in:
+- title        Short and descriptive, naming the topic. NOT the paper's title.
+- description  One line. What the paper claims, then the open question the
+               discussion left standing. Drives the listing, link previews and
+               the feed, so it has to earn a click on its own.
+- date         YYYY-MM-DD, matching the folder-name prefix.
+- author       Leave empty. These are transcript summaries, not authored pieces.
+- categories   Two to four, only from the list in CONTRIBUTING.md.
+- draft        Leave `draft: true` in place. Whoever reviews it removes that line.
 
-…body…
-
-## Follow-up reading
-
-Any paper the group suggested reading next, with full citation, DOI, and a
-sentence on why it is worth reading alongside this one.
-
----
-
-*Compiled from the meeting recording. Speaker separation is not available in the
-room-microphone transcript, so contributions are attributed only where a name was
-used aloud.*
-
-CATEGORIES — pick only from:
-single-cell · spatial · multi-omics · microbiome · genomics · statistics ·
-causal-inference · experimental-design · batch-effects · machine-learning ·
-foundation-models · benchmarking · reproducibility · meta-science
-
-`author` is deliberately empty: these are transcript summaries, not authored pieces.
+The template ships three placeholder headings ("The paper", "Discussion",
+"Follow-up reading"). Those are a starting point, not a form to fill in —
+replace them with headings that name the actual arguments. The 18 Aug report
+used "The study", "Terminology clarified in discussion", "Criticisms", and
+"Transfer works for language but maybe not for expression?".
 ````
 
 ---
@@ -155,6 +144,15 @@ foregrounds the wrong person. Empty renders cleanly with no byline.
 **No logistics** — the first draft carried "Room 124, Building 184" into a
 permanent public archive page. Venue belongs on `about.qmd`, where it can be
 updated when it changes.
+
+**The template is the single source of truth for format** — the first draft of
+this prompt spelled out the front matter, callout and closing note inline, which
+immediately disagreed with `_template/index.qmd` (the prompt omitted `draft:
+true`, and the template's generic headings contradicted the prompt's "name the
+argument, not a generic label"). Two copies of a format drift the moment either
+is edited. The prompt now links to the template and only adds the things a
+template cannot express: what makes a good title, how to frame the description,
+and the attribution and verification rules.
 
 ## Still worth adding next time
 
