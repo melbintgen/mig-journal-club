@@ -398,7 +398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="the-process">The process</h3>
 <ol type="1">
 <li><strong>Copy <code>_template/</code></strong> to <code>posts/YYYY-MM-DD-short-slug/</code> and rename it. The date prefix is a filing convention; the <code>date:</code> field in the front matter is what actually orders the site, so keep the two in sync.</li>
-<li><strong>Write the report</strong> in <code>index.qmd</code>. Fill in every front-matter field.</li>
+<li><strong>Write the report</strong> in <code>index.qmd</code>, filling in the front matter (<code>author</code> stays empty — see below).</li>
 <li><strong>Open a pull request.</strong> The PR template has a short checklist — it exists to catch the two things that actually cause problems, copyright and attribution.</li>
 <li><strong>A second person reviews and merges.</strong> Never merge your own report. The reviewer checks the science, and checks that criticism reads as being about the work rather than the people.</li>
 </ol>
@@ -408,14 +408,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="front-matter" class="level3">
 <h3 class="anchored" data-anchor-id="front-matter">Front matter</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Short descriptive title, not the paper's title"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"One sentence. Shows in the listing and in link previews."</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> 2026-08-18</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Presenter Name"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">single-cell</span><span class="kw">,</span><span class="at"> foundation-models</span><span class="kw">,</span><span class="at"> benchmarking</span><span class="kw">]</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">draft</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Every field is already in <code>_template/index.qmd</code> — copy the template and fill it in, rather than typing the block out from memory. Three fields take judgement:</p>
+<ul>
+<li><strong><code>title</code></strong> — short and descriptive, naming the topic. Not the paper’s title.</li>
+<li><strong><code>description</code></strong> — one line. It appears in the listing, in link previews when someone pastes the URL into Teams or email, and in the feed, so it has to work on its own. Say what the paper claims, then the question the discussion left open.</li>
+<li><strong><code>author</code></strong> — <strong>leave it empty.</strong> Reports are summaries compiled from a recording, not authored pieces. Naming the presenter here would credit them with writing something they did not write.</li>
+</ul>
 <p><code>draft: true</code> hides the report from the listing while you work. Remove it when ready. Note the page still renders — blank — at its final URL while drafting.</p>
 <p><strong>Once a report is merged, do not rename its folder.</strong> The URL is the permanent address people cite and link to.</p>
 </section>
