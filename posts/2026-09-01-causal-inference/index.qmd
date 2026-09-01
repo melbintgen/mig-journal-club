@@ -4,7 +4,6 @@ description: "Three papers argue that causal inference begins by specifying the 
 date: 2026-09-01
 author: ""            # left blank: reports are transcript summaries, not authored pieces
 categories: [causal-inference, statistics, experimental-design, meta-science]
-draft: true
 ---
 
 ::: {.callout-note appearance="simple"}
