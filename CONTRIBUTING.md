@@ -28,7 +28,8 @@ by the presenter. If you would rather write your own, do that — it is better.
 1. **Copy `_template/`** to `posts/YYYY-MM-DD-short-slug/` and rename it. The date
    prefix is a filing convention; the `date:` field in the front matter is what
    actually orders the site, so keep the two in sync.
-2. **Write the report** in `index.qmd`. Fill in every front-matter field.
+2. **Write the report** in `index.qmd`, filling in the front matter (`author`
+   stays empty — see below).
 3. **Open a pull request.** The PR template has a short checklist — it exists to
    catch the two things that actually cause problems, copyright and attribution.
 4. **A second person reviews and merges.** Never merge your own report. The
@@ -46,16 +47,17 @@ readable on its own, and CI renders every PR to catch broken YAML.
 
 ### Front matter
 
-```yaml
----
-title: "Short descriptive title, not the paper's title"
-description: "One sentence. Shows in the listing and in link previews."
-date: 2026-08-18
-author: "Presenter Name"
-categories: [single-cell, foundation-models, benchmarking]
-draft: true
----
-```
+Every field is already in `_template/index.qmd` — copy the template and fill it
+in, rather than typing the block out from memory. Three fields take judgement:
+
+- **`title`** — short and descriptive, naming the topic. Not the paper's title.
+- **`description`** — one line. It appears in the listing, in link previews when
+  someone pastes the URL into Teams or email, and in the feed, so it has to work
+  on its own. Say what the paper claims, then the question the discussion left
+  open.
+- **`author`** — **leave it empty.** Reports are summaries compiled from a
+  recording, not authored pieces. Naming the presenter here would credit them
+  with writing something they did not write.
 
 `draft: true` hides the report from the listing while you work. Remove it when
 ready. Note the page still renders — blank — at its final URL while drafting.
