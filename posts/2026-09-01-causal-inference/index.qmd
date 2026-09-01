@@ -1,0 +1,167 @@
+---
+title: "Causal inference starts with the question"
+description: "Three papers argue that causal inference begins by specifying the intervention, comparator, population and target trial. What remains possible when biological studies cannot meet every causal assumption?"
+date: 2026-09-01
+author: ""            # left blank: reports are transcript summaries, not authored pieces
+categories: [causal-inference, statistics, experimental-design, meta-science]
+draft: true
+---
+
+::: {.callout-note appearance="simple"}
+**Papers.** Swales J. *The troublesome search for evidence: three cultures in
+need of integration.* Journal of the Royal Society of Medicine 93(8):402–407
+(2000). [doi:10.1177/014107680009300804](https://doi.org/10.1177/014107680009300804)
+
+Lu H, Li F, Lesko CR, Fink DS, Rudolph KE, Harhay MO, Rentsch CT, Fiellin DA,
+Gonsalves GS. *Four targets: an enhanced framework for guiding causal inference
+from observational data.* International Journal of Epidemiology 54(1):dyaf003
+(2025). [doi:10.1093/ije/dyaf003](https://doi.org/10.1093/ije/dyaf003)
+
+Dickerman BA, García-Albéniz X, Logan RW, Denaxas S, Hernán MA. *Avoidable flaws
+in observational analyses: an application to statins and cancer.* Nature
+Medicine 25(10):1601–1606 (2019).
+[doi:10.1038/s41591-019-0597-x](https://doi.org/10.1038/s41591-019-0597-x)
+
+**Presented by** Jiadong Mao · **1 September 2026** · [Slides](https://jiadongm.github.io/introCausal/)
+:::
+
+## The question comes before the method
+
+Together, the three papers make a case for treating causal inference first as a
+discipline of question-setting. A causal question must say what intervention is
+being compared with what alternative, for whom, over what period, and against
+which outcome. Choosing a model before settling those points does not merely
+leave details unspecified; it can change the question being answered.
+
+Dickerman and colleagues provide the sharpest demonstration. Using electronic
+health records from 733,804 UK adults, they compared statin initiation with no
+initiation. An analysis that classified people by whether they accumulated more
+than four years of statin use produced a hazard ratio of 0.22 for total cancer,
+suggesting a very large protective association. The classification used future
+information: to enter the long-term-user group, a person had to remain alive,
+cancer-free and under follow-up long enough to accumulate that exposure. This
+created immortal time bias.
+
+When eligibility, treatment assignment and the start of follow-up were aligned
+at time zero to emulate a target trial, the corresponding intention-to-treat
+hazard ratio was 1.02. The same flaw reversed the apparent direction of the
+association with type 2 diabetes: defining exposure by observed duration gave a
+hazard ratio of 0.20, whereas the target-trial estimate was 1.11. The lesson is
+not that observational data cannot support causal inference. It is that a large
+dataset and a sophisticated analysis cannot repair a comparison defined using
+information that would have been unavailable when treatment was assigned.
+
+## Four targets expose what the estimate means
+
+Lu and colleagues proposed four targets for causal inference on observation data. The **target
+estimand** states the treatment effect of interest, including the intervention,
+comparator, outcome and follow-up. The **target population** states to whom the
+answer is intended to apply. The **target trial** is the hypothetical pragmatic
+randomised trial the observational analysis seeks to emulate. **Target validity**
+then asks whether the estimate is valid for that estimand and population,
+combining the usual concerns about internal and external validity.
+
+This framework shifts difficult conversations to the beginning of a study. “Do
+statins prevent cancer?” is not yet a complete causal question: initiation and
+sustained treatment are different interventions, dose and adherence require
+definitions, and the relevant population and follow-up period must be fixed.
+Changing these choices after seeing the result changes the estimand and invites
+cherry-picking.
+
+The discussion connected these targets to three identification assumptions.
+**Consistency** requires the intervention and outcome to be defined well enough
+that an observed treatment corresponds to the treatment being analysed.
+**Positivity** requires both treatment strategies to be possible for every
+relevant kind of participant. **Exchangeability** requires the comparison groups
+not to differ, after conditioning on measured information, in other causes of
+the outcome. Health-seeking behaviour illustrates the last problem: people who
+take preventive medication may also seek care, undergo screening or change
+behaviour in ways that affect their cancer risk.
+
+Making assumptions explicit is useful, but does not make them true. An analysis
+can therefore supply a causal answer only conditional on assumptions that data
+alone may not verify. Disagreement about a causal conclusion may persist because
+attendees accept different assumptions, rather than because one side has chosen
+the wrong estimator.
+
+## Cell experiments intervene, but design still sets the claim
+
+The same reasoning applies to single-cell experiments without requiring every
+study to adopt the machinery of observational epidemiology. A pathway-inhibition
+experiment can specify an intervention, a matched control, an outcome at a fixed
+time and a target population of donors. In that sense, experimental biologists
+already reason causally whenever they perturb a system and compare outcomes.
+
+The causal framing nevertheless reveals familiar failure modes. Cells are not
+independent biological replicates when treatment is assigned at the donor or
+culture level. Quality-control filtering can also become post-treatment
+selection: if an intervention changes RNA abundance or cell viability, applying
+the same threshold may selectively remove the cells most affected by treatment.
+Finally, a result across a small set of donors does not automatically transport
+to the population the biological claim names.
+
+One unresolved point was whether formal causal inference is necessary for useful
+biological or clinical work. Yeganeh Khazaei argued that action can be justified
+by a sufficiently strong body of evidence without every study establishing a
+causal effect in isolation. Others stressed that discovery experiments often
+leave the question flexible and use a later perturbation as validation, which
+does not necessarily reproduce a pre-specified target trial. Jiadong's proposed
+middle ground was causal inference as an attitude to design: ask what would have
+to be compared, make the assumptions visible, and state how far the resulting
+claim can travel.
+
+## Evidence does not come from one culture
+
+Swales' three “cultures” supplied a broader account of evidence: mechanistic
+biomedicine asks whether an intervention could work, clinical experience asks
+how it behaves in whole patients, and numerical evidence estimates whether it
+does work across groups. Each can correct the others. Homeopathy has had
+apparently favourable numerical results without a credible mechanism or clinical
+acceptance. Conversely, suppressing ventricular arrhythmias after myocardial
+infarction had mechanistic and clinical plausibility, yet randomised evidence
+showed that particular antiarrhythmic drugs increased mortality.
+
+The biological analogue of clinical evidence remained unsettled. For cell and
+animal studies it might include accumulated domain knowledge about the model,
+the experimental design and the conditions under which results have previously
+translated. It would not replace direct evidence in patients, but it still
+constrains which causal accounts are plausible. No resolution was reached on how
+the three cultures should be weighted, or on what their precise analogues are
+outside clinical medicine.
+
+Meta-analysis does not remove this design problem. Pooling studies that define
+exposure, time zero or eligible populations incompatibly can make a biased answer
+more precise. Yeganeh noted that when clinical studies are highly heterogeneous,
+a systematic or scoping review may be more defensible than forcing a pooled
+estimate. Inclusion criteria and the target question must therefore be settled
+before synthesis, just as they must be settled before modelling a single cohort.
+
+## Follow-up reading
+
+Yeganeh proposed adaptive platform trials as a practical extension to the
+discussion. These trials use a master protocol to evaluate several interventions
+and can add or drop arms under pre-specified decision rules. A general entry point
+is Angus DC, Alexander BM, Berry S, *et al.* *Adaptive platform trials:
+definition, design, conduct and reporting considerations.* Nature Reviews Drug
+Discovery 18:797–807 (2019).
+[doi:10.1038/s41573-019-0034-3](https://doi.org/10.1038/s41573-019-0034-3)
+
+---
+
+*Compiled from the meeting recording. Speaker separation is not available in the room-microphone transcript, so contributions are attributed only where a name was used aloud.*
+
+::: {.content-hidden}
+Reviewer checks before publication:
+
+- Yeganeh Khazaei offered to send a specific paper associated with MCRI work on
+  drawing causal inferences from studies not originally designed for that
+  purpose. The title was not captured in the transcript, so it has not been
+  cited here. Add it if it was subsequently shared.
+- The adaptive-platform-trial review above is a verified general entry point,
+  not necessarily the specific paper Yeganeh had in mind.
+- Several names of single-cell methods or projects at 00:56:58–00:57:17 were
+  mangled beyond reliable identification and were omitted.
+- References to grant applications and attendees' ongoing work were omitted
+  because their publication status and permission for public reporting could
+  not be verified.
+:::
