@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2026-09-01-causal-inference/index.html",
       "/posts/2026-08-18-scfm-pretraining-scale/index.html"
     ]
   }
