@@ -38,6 +38,12 @@ TASK. Familiarise yourself with the paper for context, then focus on what was
 discussed, criticised and defined. Do not minute the meeting — convey the
 substance of the arguments.
 
+SCOPE. Draft only. Produce the contents of the one file and stop there.
+A human creates the post folder, opens the pull request, has it reviewed by
+someone who attended, removes `draft: true`, and merges. Do not create branches,
+open pull requests, commit, or publish anything. Do not decide that a
+contentious passage is fine to publish — flag it and let the reviewer rule.
+
 WRITING
 - Narrative scientific prose. Not bullet-point minutes, not an executive summary.
 - Concise. Use few headings, only where the discussion genuinely changed subject.
