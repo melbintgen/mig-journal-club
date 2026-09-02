@@ -24,6 +24,8 @@ website:
       - about.qmd
       - CONTRIBUTING.md
     right:
+      - text: "Register"
+        href: https://docs.google.com/forms/d/e/1FAIpQLSfgcOM5Xg5BceSKjY6UgjAWhQK9EpcHZ-zQdFhQhyOEFXXn1w/viewform
       - text: "Propose a paper"
         href: https://github.com/melbintgen/mig-journal-club/issues/new?template=propose-paper.yml
       - icon: rss
