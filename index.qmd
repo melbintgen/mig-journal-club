@@ -16,32 +16,24 @@ We meet to read one or more papers closely. Each meeting is summarised here: wha
 the paper claimed, what we discussed, what stayed unresolved, and what we might
 read next. New members and visitors are welcome.
 
+::: {.registration-callout}
+### Join the journal club
+
+[Register for meeting updates](https://docs.google.com/forms/d/e/1FAIpQLSfgcOM5Xg5BceSKjY6UgjAWhQK9EpcHZ-zQdFhQhyOEFXXn1w/viewform){.registration-link}
+:::
+
 ::: {.next-meeting}
 ### Next meeting
 
-**Tuesday 1 September 2026, 3:30 pm** · Room 124, Building 184
+**Thursday in October, date to be confirmed · 3:30 pm** · Room 124, Building 184
 
-**Jiadong** will discuss several papers that shaped how he thinks about the way
-causal questions are posed in causal inference.
+**Speaker:** to be confirmed
 
-- Swales J. *The troublesome search for evidence: three cultures in need of
-  integration.* J R Soc Med 93(8):402–407 (2000).
-  [doi:10.1177/014107680009300804](https://doi.org/10.1177/014107680009300804) —
-  a high-level, somewhat philosophical discussion of what counts as scientific
-  evidence.
-- Lu H, Li F, Lesko CR, *et al.* *Four targets: an enhanced framework for guiding
-  causal inference from observational data.* Int J Epidemiol 54(1) (2025).
-  [doi:10.1093/ije/dyaf003](https://doi.org/10.1093/ije/dyaf003) — a review
-  defining the key concepts in formulating a causal question from observational
-  data.
-- Dickerman BA, García-Albéniz X, Logan RW, Denaxas S, Hernán MA. *Avoidable
-  flaws in observational analyses: an application to statins and cancer.* Nat Med
-  25(10):1601–1606 (2019).
-  [doi:10.1038/s41591-019-0597-x](https://doi.org/10.1038/s41591-019-0597-x) — a
-  classic paper resolving an apparent conflict between observational studies and
-  meta-analyses of trials by designing the causal task properly.
+We will read León-Periñán, Karaiskos & Rajewsky, [*Ultrafast and reference-free
+sequence discovery in single-cell data*](https://www.nature.com/articles/s41586-026-10975-w)
+(*Nature*, 2026).
 
-Reading all three is not expected. Come anyway.
+Will this be a game changer for transcriptomics?
 :::
 
 ## Past meetings

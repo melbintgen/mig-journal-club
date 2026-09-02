@@ -57,3 +57,32 @@ main.content {
   text-transform: uppercase;
   opacity: 0.7;
 }
+
+// Prominent sign-up action on the landing page, with a persistent navbar link.
+.registration-callout {
+  background: rgba(0, 121, 107, 0.08);
+  border: 1px solid rgba(0, 121, 107, 0.35);
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+}
+
+.registration-callout h3 {
+  margin-top: 0;
+}
+
+.registration-link {
+  background: $mig-accent;
+  border-radius: 4px;
+  color: #fff !important;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.55rem 0.9rem;
+  text-decoration: none;
+}
+
+.registration-link:hover,
+.registration-link:focus {
+  background: darken($mig-accent, 8%);
+  color: #fff !important;
+}
