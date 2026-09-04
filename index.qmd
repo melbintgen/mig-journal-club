@@ -25,9 +25,9 @@ read next. New members and visitors are welcome.
 ::: {.next-meeting}
 ### Next meeting
 
-**Thursday in October, date to be confirmed · 3:30 pm** · Room 124, Building 184
+**Thursday 8 October · 3:30 pm** · Room 124, Building 184
 
-**Speaker:** to be confirmed
+**Speakers:** Xiaochen Zhang and Jiadong Mao
 
 We will read León-Periñán, Karaiskos & Rajewsky, [*Ultrafast and reference-free
 sequence discovery in single-cell data*](https://www.nature.com/articles/s41586-026-10975-w)
