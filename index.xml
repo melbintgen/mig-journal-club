@@ -10,7 +10,131 @@
 <atom:link href="https://melbintgen.github.io/mig-journal-club/index.xml" rel="self" type="application/rss+xml"/>
 <description>Readings and discussion from the Melbourne Integrative Genomics journal club.</description>
 <generator>quarto-1.10.19</generator>
-<lastBuildDate>Tue, 01 Sep 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 08 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Searching single-cell data beyond gene counts</title>
+  <link>https://melbintgen.github.io/mig-journal-club/posts/2026-10-08-sequence-search-single-cell/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Paper.</strong> León-Periñán D, Karaiskos N, Rajewsky N. <em>Ultrafast and reference-free sequence discovery in single-cell data.</em> Nature 658:514–524 (2026). <a href="https://doi.org/10.1038/s41586-026-10975-w">doi:10.1038/s41586-026-10975-w</a></p>
+<p><strong>Presented by</strong> <a href="https://jiadongm.github.io/MALVA_JournalClub/malva-journal-club-2026-10-08.pdf#page=1">Jiadong Mao</a> and <a href="https://jiadongm.github.io/MALVA_JournalClub/malva-journal-club-2026-10-08.pdf#page=6">Xiaochen Zhang</a> · <strong>8 October 2026</strong></p>
+<p><strong>Slides (32 pages).</strong> <a href="https://jiadongm.github.io/MALVA_JournalClub/malva-journal-club-2026-10-08.pdf">View the complete PDF</a> · <a href="https://github.com/jiadongm/MALVA_JournalClub/raw/refs/heads/main/malva-journal-club-2026-10-08.pdf?download=1">Download the PDF</a>. Jiadong’s case studies resume on page 16.</p>
+</div>
+</div>
+</div>
+<section id="extra-information-from-an-experiment-already-done" class="level2">
+<h2 class="anchored" data-anchor-id="extra-information-from-an-experiment-already-done">Extra information from an experiment already done</h2>
+<p>Jiadong framed Malva as a “buy one, get one free” opportunity: what else can we learn from single-cell RNA sequencing after producing a gene-count matrix? RNA velocity supplied a familiar analogy. It returns to reads for splicing information that the gene totals alone cannot provide. Malva extends the range of sequence questions that can be asked across archived datasets.</p>
+<p>The opening example was <a href="https://www.ncbi.nlm.nih.gov/clinvar/variation/375881/"><em>DNMT3A</em> R882H</a>, a G-to-A substitution that changes amino acid 882 from arginine to histidine. Searching for fragments containing either base could ask which blood cells express the altered sequence, and whether those cells share a transcriptional state. This was a proposed use, with no Malva query result shown. It also exposed a central limitation: a search cannot find a mutation at a position that the RNA experiment did not cover.</p>
+</section>
+<section id="equal-gene-counts-can-hide-different-sequences" class="level2">
+<h2 class="anchored" data-anchor-id="equal-gene-counts-can-hide-different-sequences">Equal gene counts can hide different sequences</h2>
+<p>Xiaochen illustrated the information loss with two cells and one gene. In the toy example, both cells contribute three counted fragments from gene X:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cell</th>
+<th style="text-align: right;">Reference fragment <code>ACGTTGCA</code></th>
+<th style="text-align: right;">Alternative fragment <code>ACATTGCA</code></th>
+<th style="text-align: right;">Gene X total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td>C2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+<p>The count matrix gives both cells the same value, but the alternative sequence occurs only in C2. The original reads can retain this distinction after it has disappeared from the gene matrix. Neither these fragment counts nor their ratio directly establishes the cell’s DNA genotype.</p>
+<p>Malva changes how that sequence evidence can be accessed:</p>
+<ul>
+<li><strong>Index sequences with their cells.</strong> A <em>k-mer</em> is a sequence of length k. In the four-base toy example, <code>ACGT</code> maps to C1 and C2, whereas <code>ACAT</code> maps only to C2. Cell barcodes preserve the link to the originating cell. The paper uses 24-base k-mers.</li>
+<li><strong>Search the index.</strong> Querying <code>ACAT</code> retrieves C2 and its associated metadata. Malva reads the relevant index entries from disk, avoiding a fresh scan of all the raw files. Longer probes use multiple k-mers and matching thresholds.</li>
+<li><strong>Choose the output for the question.</strong> A known sequence returns matching cells; queries along a transcript reveal coverage. Grouping related k-mers into “buckets” produces features for cell comparison and clustering.</li>
+</ul>
+<p>Jiadong identified the main advance as making these operations practical at single-cell resolution across a large, expanding archive. Existing approaches could answer sequence questions within a dataset, but repeated downloading, processing and memory requirements made searches across studies difficult. Malva’s index supports low-memory queries and additions of newly indexed data.</p>
+</section>
+<section id="what-the-biological-examples-establish" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-biological-examples-establish">What the biological examples establish</h2>
+<p>The slides used several cases to show which distinctions disappear when reads are reduced to gene totals:</p>
+<ul>
+<li><strong>Inherited variation:</strong> 64-base probes targeted 296,985 common, coding variants with two alleles. Observed allele frequencies tracked population frequencies in healthy and disease samples. Artificial control probes with an additional altered base did not show the same relationship (Fig. 3b). This supports recovery of a known population pattern, rather than complete genotyping of every cell.</li>
+<li><strong>Cancer mutations:</strong> the benchmark compared Malva with existing mutation calls in the scTML database, covering 280 tumour samples and 16 cancer types. The paper reports mean sensitivity of about 0.94 across cancer types against those calls (Fig. 4). The discussion stressed that the queries supplied known mutations. The result therefore tests their retrieval, not the ability to discover an unknown mutation. Variants near splice sites were harder to recover; an outlying pancreatic cancer dataset contained mouse-derived samples queried with human probes.</li>
+<li><strong>Exon usage:</strong> in the mouse <em>Ptprc</em> example, B cells showed stronger inclusion of exon A than other immune populations (Fig. 3c). A gene total conceals this exon-level difference. A local sequence hit supports exon usage, but assigning a complete transcript isoform requires evidence across the transcript.</li>
+<li><strong>Transcript ends in space:</strong> the distal 3′ untranslated region of <em>Add2</em> localised to developing neural tissue, while the proximal form accumulated in liver (Fig. 3d). These are different RNA endings from the same gene. Their spatial distribution suggests that developmental shifts in bulk profiles partly reflect changes in tissue composition.</li>
+</ul>
+<p>An isoform difference can arise through RNA processing without a DNA mutation. Searching for an exon, splice junction or transcript end does not necessarily amount to searching for a changed DNA allele.</p>
+</section>
+<section id="interpreting-clusters-built-from-sequences" class="level2">
+<h2 class="anchored" data-anchor-id="interpreting-clusters-built-from-sequences">Interpreting clusters built from sequences</h2>
+<p>Malva’s bucket representation permits analysis without specifying a target sequence in advance. Across roughly 30 million cells, its cell representations showed variable agreement with those derived from gene counts. The examples prompted a question: does a different cluster reveal biology missed by gene counts, or reflect differences in the data and representation?</p>
+<p>The marker-sequence results in the slides make that question more concrete:</p>
+<ul>
+<li>Malva assembled longer marker sequences from k-mers associated with clusters. These sequences could then be inspected and compared with known annotations.</li>
+<li>A short <em>KLK10</em> transcript-end signal localised within tumour regions. Bacterial ribosomal RNA markers appeared outside the tissue (Fig. 5e,h). Both supply an interpretation beyond simply obtaining a different clustering.</li>
+</ul>
+<p>The discussion expressed scepticism about the meaning of a spatial region with little gene-expression signal. The paper’s bacterial sequence evidence matters here: signal outside the tissue can have an identifiable source without defining a new cell population. Agreement with gene-based clusters and discovery of additional sequences therefore require different checks.</p>
+</section>
+<section id="coverage-sets-the-limits-of-a-negative-result" class="level2">
+<h2 class="anchored" data-anchor-id="coverage-sets-the-limits-of-a-negative-result">Coverage sets the limits of a negative result</h2>
+<p>The <em>DNMT3A</em> example returned as a reason to be cautious. Standard 3′ protocols concentrate reads near transcript ends, making an internal coding site such as codon 882 difficult to capture. A cell can express <em>DNMT3A</em> while providing no reads at the mutation site. The slides distinguished several other reasons for a missing hit:</p>
+<ul>
+<li><strong>No transcription or weak expression:</strong> much genomic DNA contributes no RNA to the experiment; low expression also makes sampling sparse.</li>
+<li><strong>Transcript processing:</strong> mature messenger RNA usually lacks introns, although the amount of intronic RNA depends on the assay and sample.</li>
+<li><strong>End-biased capture:</strong> 3′ and 5′ protocols cover different transcript regions. A negative query must be interpreted against coverage at the target site.</li>
+<li><strong>Allele expression and sampling:</strong> a cell can carry two different alleles while the captured RNA represents only one. No hit for the other allele does not establish its absence from the DNA.</li>
+</ul>
+<p>The numerical output needs care too. Malva’s “pseudocounts” summarise sequence matches without correction using unique molecular identifiers, the tags used to distinguish original RNA molecules from amplified copies. They should not be read as absolute molecule counts.</p>
+</section>
+<section id="proposed-uses-and-unresolved-practical-questions" class="level2">
+<h2 class="anchored" data-anchor-id="proposed-uses-and-unresolved-practical-questions">Proposed uses and unresolved practical questions</h2>
+<p>Two possible uses followed from the discussion:</p>
+<ul>
+<li><strong>Reuse archived experiments.</strong> Search a candidate variant across suitable public samples, then examine the associated cell types and disease contexts. Such a search can extend an existing observation; it does not establish that the variant causes a particular cell state.</li>
+<li><strong>Use sequence features alongside gene counts.</strong> Buckets offer another representation of the same experiment for integration or model training. The suggestion that they might improve foundation models remained a hypothesis, with no comparison presented at the meeting.</li>
+</ul>
+<p>An attendee asked how the search handles sequencing errors while retaining single-base discrimination. The lookup uses exact k-mer matches; longer probes combine evidence across windows. The paper reports error simulations, but the meeting did not resolve how best to choose probes and thresholds for a particular mutation.</p>
+<p>Access was a separate practical obstacle. Jiadong could not run the intended live query because access to the shared index had not been obtained. The paper describes academic access through an application programming interface (API) and provides code for local indexing. Those are distinct routes, and the group did not test either during the meeting.</p>
+<p>The appeal remained the same as the opening “buy one, get one free” analogy: the sequencing has already been done. Returning to its reads can answer new questions, provided the required sequence was captured and the resulting hit supports the interpretation being proposed.</p>
+<hr>
+<p><em>Compiled from the meeting recording. Speaker separation is not available in the room-microphone transcript, so contributions are attributed only where a name was used aloud.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>single-cell</category>
+  <category>genomics</category>
+  <category>benchmarking</category>
+  <guid>https://melbintgen.github.io/mig-journal-club/posts/2026-10-08-sequence-search-single-cell/</guid>
+  <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Causal inference starts with the question</title>
   <link>https://melbintgen.github.io/mig-journal-club/posts/2026-09-01-causal-inference/</link>
