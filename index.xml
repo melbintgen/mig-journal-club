@@ -9,7 +9,7 @@
 <link>https://melbintgen.github.io/mig-journal-club/</link>
 <atom:link href="https://melbintgen.github.io/mig-journal-club/index.xml" rel="self" type="application/rss+xml"/>
 <description>Readings and discussion from the Melbourne Integrative Genomics journal club.</description>
-<generator>quarto-1.10.18</generator>
+<generator>quarto-1.10.19</generator>
 <lastBuildDate>Tue, 01 Sep 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Causal inference starts with the question</title>

@@ -1,38 +1,87 @@
 [
   {
-    "objectID": "CODE_OF_CONDUCT.html",
-    "href": "CODE_OF_CONDUCT.html",
-    "title": "Code of conduct",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "The MIG journal club is a place to read carefully and disagree well. These expectations apply to meetings, to this repository, and to anything published here."
+    "text": "The MIG journal club is run by Melbourne Integrative Genomics at the University of Melbourne. We read one paper — occasionally a small set — and discuss it properly for an hour.\nPapers are chosen mainly by whoever is presenting. We will also discuss towards the end of each session what papers the audience what to see. Example topics include (not limited to):"
   },
   {
-    "objectID": "CODE_OF_CONDUCT.html#expected-behaviour",
-    "href": "CODE_OF_CONDUCT.html#expected-behaviour",
-    "title": "Code of conduct",
-    "section": "Expected behaviour",
-    "text": "Expected behaviour\n\nCriticise work, not people. “This design cannot separate cells from donors” is useful. “The authors clearly don’t understand single-cell data” is not.\nAssume good faith. Papers are written under constraints we cannot see, by people who are not present to reply.\nMake space. Journal clubs are dominated by whoever is most confident. Presenters and chairs should actively invite quieter attendees in.\nAsk the naive question. If you are lost, others are too, and saying so improves the discussion for everyone."
+    "objectID": "about.html#when-we-meet",
+    "href": "about.html#when-we-meet",
+    "title": "About",
+    "section": "When we meet",
+    "text": "When we meet\nMonthly, on a Thursday at 3:30 pm, in Room 124, Building 184. See the next meeting for the current date."
   },
   {
-    "objectID": "CODE_OF_CONDUCT.html#publication-and-attribution",
-    "href": "CODE_OF_CONDUCT.html#publication-and-attribution",
-    "title": "Code of conduct",
-    "section": "Publication and attribution",
-    "text": "Publication and attribution\nMeetings are reported and published on this public site. Because of that:\n\nReports name the presenter, and may name people who proposed follow-up reading. Discussion points are otherwise attributed impersonally.\nYou can ask not to be named. Tell the organisers, before or after the meeting, and we will remove the attribution. No reason needed.\nCriticism published here is directed at the work. Before a report is merged it is reviewed by someone other than its author, partly to check this.\n\nSee contributing for the full reporting process."
+    "objectID": "about.html#how-to-join",
+    "href": "about.html#how-to-join",
+    "title": "About",
+    "section": "How to join",
+    "text": "How to join\nAnyone interested is welcome — MIG members, people elsewhere at the University and affiliated institutes, visitors. There is no membership and no commitment to attend regularly.\nTo be added to the meeting invitations, contact Jiadong Mao."
   },
   {
-    "objectID": "CODE_OF_CONDUCT.html#unacceptable-behaviour",
-    "href": "CODE_OF_CONDUCT.html#unacceptable-behaviour",
-    "title": "Code of conduct",
-    "section": "Unacceptable behaviour",
-    "text": "Unacceptable behaviour\nHarassment, discrimination, personal attacks, and dismissive remarks about someone’s background or level of experience are not tolerated, in meetings or in this repository."
+    "objectID": "about.html#do-i-need-to-read-the-paper-before-the-session",
+    "href": "about.html#do-i-need-to-read-the-paper-before-the-session",
+    "title": "About",
+    "section": "Do I need to read the paper before the session?",
+    "text": "Do I need to read the paper before the session?\nYou are welcome to come without having read the paper. Most people have skimmed it; a few have read it closely; the discussion is built to work either way."
   },
   {
-    "objectID": "CODE_OF_CONDUCT.html#reporting",
-    "href": "CODE_OF_CONDUCT.html#reporting",
-    "title": "Code of conduct",
-    "section": "Reporting",
-    "text": "Reporting\nRaise a concern with the journal club organisers directly. Anything involving the conduct of an organiser can be taken to the University of Melbourne’s staff complaint channels."
+    "objectID": "about.html#how-meetings-are-recorded-and-published",
+    "href": "about.html#how-meetings-are-recorded-and-published",
+    "title": "About",
+    "section": "How meetings are recorded and published",
+    "text": "How meetings are recorded and published\nMeetings are audio-recorded for edited transcripts to be published. Please read this section before your first meeting.\n\nThe recording is used only to compile the report, and the recording itself is not published.\nReports name the presenter, and may name people who proposed follow-up reading. Other contributions are attributed anonymously — “it was noted”, “one attendee argued” — because room microphones do not always separate speakers reliably.\nEvery report is reviewed by someone other than its author before it is published. That review checks the science, and also checks that criticism is aimed at the work rather than at the people who did it.\nYou can ask not to be named, before or after a meeting, with no reason needed. Tell an organiser and the attribution is removed. (You can also pick a pseudonym, say Socrates.)\n\nDiscussion here is often critical, sometimes sharply. That is the point of a journal club. It is published in the spirit of open scientific disagreement, and we try hard to keep it directed at the work. If you are an author of something we have discussed and feel we have got you wrong, open an issue — we will correct it, and you are very welcome to reply."
+  },
+  {
+    "objectID": "about.html#presenting",
+    "href": "about.html#presenting",
+    "title": "About",
+    "section": "Presenting",
+    "text": "Presenting\nPresenting is informal: pick a paper you want to think about, bring it, and lead the discussion. You do not need slides, although slides are recommended. See contributing if you would like to report on your own session, or propose a paper for someone else to present."
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing",
+    "section": "",
+    "text": "There are three ways to contribute, in increasing order of effort."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#fix-something-one-click",
+    "href": "CONTRIBUTING.html#fix-something-one-click",
+    "title": "Contributing",
+    "section": "1. Fix something — one click",
+    "text": "1. Fix something — one click\nEvery page has an “Edit this page” link in the right-hand margin. Click it and GitHub opens an editor, forks the repository for you, and offers to open a pull request. You do not need to install anything, or know git.\nUse it for typos, broken links, a mangled citation, or a point we recorded wrong. Small corrections are genuinely welcome — nobody will think less of a one-word PR."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#propose-a-paper",
+    "href": "CONTRIBUTING.html#propose-a-paper",
+    "title": "Contributing",
+    "section": "2. Propose a paper",
+    "text": "2. Propose a paper\nOpen a paper proposal. You do not have to present it yourself."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#report-about-the-meeting",
+    "href": "CONTRIBUTING.html#report-about-the-meeting",
+    "title": "Contributing",
+    "section": "3. Report about the meeting",
+    "text": "3. Report about the meeting\nReports are usually drafted from the recording by an organiser and then reviewed by the presenter. If you would rather write your own, do that — it is better.\n\nThe process\n\nCopy _template/ to posts/YYYY-MM-DD-short-slug/ and rename it. The date prefix is a filing convention; the date: field in the front matter is what actually orders the site, so keep the two in sync.\nWrite the report in index.qmd, filling in the front matter (author stays empty — see below).\nOpen a pull request. The PR template has a short checklist — it exists to catch the two things that actually cause problems, copyright and attribution.\nA second person reviews and merges. Never merge your own report. The reviewer checks the science, and checks that criticism reads as being about the work rather than the people.\n\nTo preview locally you need Quarto:\nquarto preview\nThis is optional. Reports are prose, so the GitHub pull request diff is perfectly readable on its own, and CI renders every PR to catch broken YAML.\n\n\nFront matter\nEvery field is already in _template/index.qmd — copy the template and fill it in, rather than typing the block out from memory. Three fields take judgement:\n\ntitle — short and descriptive, naming the topic. Not the paper’s title.\ndescription — one line. It appears in the listing, in link previews when someone pastes the URL into Teams or email, and in the feed, so it has to work on its own. Say what the paper claims, then the question the discussion left open.\nauthor — leave it empty. Reports are summaries compiled from a recording, not authored pieces. Naming the presenter here would credit them with writing something they did not write.\n\ndraft: true hides the report from the listing while you work. Remove it when ready. Note the page still renders — blank — at its final URL while drafting.\nOnce a report is merged, do not rename its folder. The URL is the permanent address people cite and link to.\n\n\nCategories\nPick from this list, so the sidebar stays usable:\nsingle-cell · spatial · multi-omics · microbiome · genomics · statistics · causal-inference · experimental-design · batch-effects · machine-learning · foundation-models · benchmarking · reproducibility · meta-science\nTwo or three per report is plenty. To add a new category, propose it in your PR — the point of a fixed list is that scRNA-seq, scRNAseq and single-cell RNA-seq don’t become three separate entries."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#figures",
+    "href": "CONTRIBUTING.html#figures",
+    "title": "Contributing",
+    "section": "Figures and copyright",
+    "text": "Figures and copyright\nThis is a public repository, so this part matters.\n\nNever commit a PDF of a paper. Link to the DOI.\nDo not screenshot figures from paywalled papers. Reproducing a figure from a closed-access paper on a public website is a copyright breach.\n\nA figure in a report must be one of:\n\nYour own — a schematic you drew, or a plot you made from public data.\nFrom an open-access paper under a CC licence, reproduced with attribution and a link to the source. Check the licence; “free to read” is not the same as “free to reuse”.\nAbsent. Describing a figure in prose is almost always enough, and it is what most of our reports do.\n\nShort quotations from a paper are fine, in quotation marks, with a citation."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#writing-style",
+    "href": "CONTRIBUTING.html#writing-style",
+    "title": "Contributing",
+    "section": "Writing style",
+    "text": "Writing style\nThe house style is narrative prose, not bullet-point minutes. What we are trying to capture is the argument — the objection someone raised, why it mattered, and whether it survived. A reader who did not attend should be able to follow the reasoning.\n\nSections follow the shape of the discussion, not a fixed template.\nName the presenter and anyone who proposed follow-up reading. Attribute other points impersonally: room microphones do not separate speakers reliably, and people speak more freely knowing that.\nCriticise the work, not the authors. See the code of conduct.\nRecord disagreement that was left unresolved. It is more useful than a tidy consensus that nobody actually reached.\nIf the discussion relied on unpublished or in-progress work by someone who attended, check with them before it goes on a public site.\n\nDo not put internal notes in &lt;!-- HTML comments --&gt;. They are passed straight through into the published page source. Use a ::: {.content-hidden} div instead.\nThe first report is a reasonable model."
   },
   {
     "objectID": "index.html",
@@ -133,87 +182,38 @@
     "text": "Follow-up reading\nChengyi proposed a companion paper: Rosen Y, Roohani Y, Agrawal A, Samotorčan L, Tabula Sapiens Consortium, Quake SR, Leskovec J. Universal cell embedding provides a foundation model for cell biology. Nature 656:183–191 (2026). doi:10.1038/s41586-026-10689-z\nUCE pursues the same premise — self-supervised pre-training on a large corpus to yield a universal per-cell embedding — but reports strong zero-shot downstream performance without fine-tuning, across 36 million cells and over 1,000 cell types, including generalisation to species absent from training. The apparent contradiction with DenAdel et al. is the reason to read the two together, and turns on evaluation task, corpus composition, and whether the reported gains survive a PCA baseline.\n\nCompiled from the meeting recording. Speaker separation is not available in the room-microphone transcript, so contributions are attributed only where a name was used aloud."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "CODE_OF_CONDUCT.html",
+    "href": "CODE_OF_CONDUCT.html",
+    "title": "Code of conduct",
     "section": "",
-    "text": "The MIG journal club is run by Melbourne Integrative Genomics at the University of Melbourne. We read one paper — occasionally a small set — and discuss it properly for an hour.\nPapers are chosen mainly by whoever is presenting. We will also discuss towards the end of each session what papers the audience what to see. Example topics include (not limited to):"
+    "text": "The MIG journal club is a place to read carefully and disagree well. These expectations apply to meetings, to this repository, and to anything published here."
   },
   {
-    "objectID": "about.html#when-we-meet",
-    "href": "about.html#when-we-meet",
-    "title": "About",
-    "section": "When we meet",
-    "text": "When we meet\nMonthly, on a Thursday at 3:30 pm, in Room 124, Building 184. See the next meeting for the current date."
+    "objectID": "CODE_OF_CONDUCT.html#expected-behaviour",
+    "href": "CODE_OF_CONDUCT.html#expected-behaviour",
+    "title": "Code of conduct",
+    "section": "Expected behaviour",
+    "text": "Expected behaviour\n\nCriticise work, not people. “This design cannot separate cells from donors” is useful. “The authors clearly don’t understand single-cell data” is not.\nAssume good faith. Papers are written under constraints we cannot see, by people who are not present to reply.\nMake space. Journal clubs are dominated by whoever is most confident. Presenters and chairs should actively invite quieter attendees in.\nAsk the naive question. If you are lost, others are too, and saying so improves the discussion for everyone."
   },
   {
-    "objectID": "about.html#how-to-join",
-    "href": "about.html#how-to-join",
-    "title": "About",
-    "section": "How to join",
-    "text": "How to join\nAnyone interested is welcome — MIG members, people elsewhere at the University and affiliated institutes, visitors. There is no membership and no commitment to attend regularly.\nTo be added to the meeting invitations, contact Jiadong Mao."
+    "objectID": "CODE_OF_CONDUCT.html#publication-and-attribution",
+    "href": "CODE_OF_CONDUCT.html#publication-and-attribution",
+    "title": "Code of conduct",
+    "section": "Publication and attribution",
+    "text": "Publication and attribution\nMeetings are reported and published on this public site. Because of that:\n\nReports name the presenter, and may name people who proposed follow-up reading. Discussion points are otherwise attributed impersonally.\nYou can ask not to be named. Tell the organisers, before or after the meeting, and we will remove the attribution. No reason needed.\nCriticism published here is directed at the work. Before a report is merged it is reviewed by someone other than its author, partly to check this.\n\nSee contributing for the full reporting process."
   },
   {
-    "objectID": "about.html#do-i-need-to-read-the-paper-before-the-session",
-    "href": "about.html#do-i-need-to-read-the-paper-before-the-session",
-    "title": "About",
-    "section": "Do I need to read the paper before the session?",
-    "text": "Do I need to read the paper before the session?\nYou are welcome to come without having read the paper. Most people have skimmed it; a few have read it closely; the discussion is built to work either way."
+    "objectID": "CODE_OF_CONDUCT.html#unacceptable-behaviour",
+    "href": "CODE_OF_CONDUCT.html#unacceptable-behaviour",
+    "title": "Code of conduct",
+    "section": "Unacceptable behaviour",
+    "text": "Unacceptable behaviour\nHarassment, discrimination, personal attacks, and dismissive remarks about someone’s background or level of experience are not tolerated, in meetings or in this repository."
   },
   {
-    "objectID": "about.html#how-meetings-are-recorded-and-published",
-    "href": "about.html#how-meetings-are-recorded-and-published",
-    "title": "About",
-    "section": "How meetings are recorded and published",
-    "text": "How meetings are recorded and published\nMeetings are audio-recorded for edited transcripts to be published. Please read this section before your first meeting.\n\nThe recording is used only to compile the report, and the recording itself is not published.\nReports name the presenter, and may name people who proposed follow-up reading. Other contributions are attributed anonymously — “it was noted”, “one attendee argued” — because room microphones do not always separate speakers reliably.\nEvery report is reviewed by someone other than its author before it is published. That review checks the science, and also checks that criticism is aimed at the work rather than at the people who did it.\nYou can ask not to be named, before or after a meeting, with no reason needed. Tell an organiser and the attribution is removed. (You can also pick a pseudonym, say Socrates.)\n\nDiscussion here is often critical, sometimes sharply. That is the point of a journal club. It is published in the spirit of open scientific disagreement, and we try hard to keep it directed at the work. If you are an author of something we have discussed and feel we have got you wrong, open an issue — we will correct it, and you are very welcome to reply."
-  },
-  {
-    "objectID": "about.html#presenting",
-    "href": "about.html#presenting",
-    "title": "About",
-    "section": "Presenting",
-    "text": "Presenting\nPresenting is informal: pick a paper you want to think about, bring it, and lead the discussion. You do not need slides, although slides are recommended. See contributing if you would like to report on your own session, or propose a paper for someone else to present."
-  },
-  {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Contributing",
-    "section": "",
-    "text": "There are three ways to contribute, in increasing order of effort."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#fix-something-one-click",
-    "href": "CONTRIBUTING.html#fix-something-one-click",
-    "title": "Contributing",
-    "section": "1. Fix something — one click",
-    "text": "1. Fix something — one click\nEvery page has an “Edit this page” link in the right-hand margin. Click it and GitHub opens an editor, forks the repository for you, and offers to open a pull request. You do not need to install anything, or know git.\nUse it for typos, broken links, a mangled citation, or a point we recorded wrong. Small corrections are genuinely welcome — nobody will think less of a one-word PR."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#propose-a-paper",
-    "href": "CONTRIBUTING.html#propose-a-paper",
-    "title": "Contributing",
-    "section": "2. Propose a paper",
-    "text": "2. Propose a paper\nOpen a paper proposal. You do not have to present it yourself."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#report-about-the-meeting",
-    "href": "CONTRIBUTING.html#report-about-the-meeting",
-    "title": "Contributing",
-    "section": "3. Report about the meeting",
-    "text": "3. Report about the meeting\nReports are usually drafted from the recording by an organiser and then reviewed by the presenter. If you would rather write your own, do that — it is better.\n\nThe process\n\nCopy _template/ to posts/YYYY-MM-DD-short-slug/ and rename it. The date prefix is a filing convention; the date: field in the front matter is what actually orders the site, so keep the two in sync.\nWrite the report in index.qmd, filling in the front matter (author stays empty — see below).\nOpen a pull request. The PR template has a short checklist — it exists to catch the two things that actually cause problems, copyright and attribution.\nA second person reviews and merges. Never merge your own report. The reviewer checks the science, and checks that criticism reads as being about the work rather than the people.\n\nTo preview locally you need Quarto:\nquarto preview\nThis is optional. Reports are prose, so the GitHub pull request diff is perfectly readable on its own, and CI renders every PR to catch broken YAML.\n\n\nFront matter\nEvery field is already in _template/index.qmd — copy the template and fill it in, rather than typing the block out from memory. Three fields take judgement:\n\ntitle — short and descriptive, naming the topic. Not the paper’s title.\ndescription — one line. It appears in the listing, in link previews when someone pastes the URL into Teams or email, and in the feed, so it has to work on its own. Say what the paper claims, then the question the discussion left open.\nauthor — leave it empty. Reports are summaries compiled from a recording, not authored pieces. Naming the presenter here would credit them with writing something they did not write.\n\ndraft: true hides the report from the listing while you work. Remove it when ready. Note the page still renders — blank — at its final URL while drafting.\nOnce a report is merged, do not rename its folder. The URL is the permanent address people cite and link to.\n\n\nCategories\nPick from this list, so the sidebar stays usable:\nsingle-cell · spatial · multi-omics · microbiome · genomics · statistics · causal-inference · experimental-design · batch-effects · machine-learning · foundation-models · benchmarking · reproducibility · meta-science\nTwo or three per report is plenty. To add a new category, propose it in your PR — the point of a fixed list is that scRNA-seq, scRNAseq and single-cell RNA-seq don’t become three separate entries."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#figures",
-    "href": "CONTRIBUTING.html#figures",
-    "title": "Contributing",
-    "section": "Figures and copyright",
-    "text": "Figures and copyright\nThis is a public repository, so this part matters.\n\nNever commit a PDF of a paper. Link to the DOI.\nDo not screenshot figures from paywalled papers. Reproducing a figure from a closed-access paper on a public website is a copyright breach.\n\nA figure in a report must be one of:\n\nYour own — a schematic you drew, or a plot you made from public data.\nFrom an open-access paper under a CC licence, reproduced with attribution and a link to the source. Check the licence; “free to read” is not the same as “free to reuse”.\nAbsent. Describing a figure in prose is almost always enough, and it is what most of our reports do.\n\nShort quotations from a paper are fine, in quotation marks, with a citation."
-  },
-  {
-    "objectID": "CONTRIBUTING.html#writing-style",
-    "href": "CONTRIBUTING.html#writing-style",
-    "title": "Contributing",
-    "section": "Writing style",
-    "text": "Writing style\nThe house style is narrative prose, not bullet-point minutes. What we are trying to capture is the argument — the objection someone raised, why it mattered, and whether it survived. A reader who did not attend should be able to follow the reasoning.\n\nSections follow the shape of the discussion, not a fixed template.\nName the presenter and anyone who proposed follow-up reading. Attribute other points impersonally: room microphones do not separate speakers reliably, and people speak more freely knowing that.\nCriticise the work, not the authors. See the code of conduct.\nRecord disagreement that was left unresolved. It is more useful than a tidy consensus that nobody actually reached.\nIf the discussion relied on unpublished or in-progress work by someone who attended, check with them before it goes on a public site.\n\nDo not put internal notes in &lt;!-- HTML comments --&gt;. They are passed straight through into the published page source. Use a ::: {.content-hidden} div instead.\nThe first report is a reasonable model."
+    "objectID": "CODE_OF_CONDUCT.html#reporting",
+    "href": "CODE_OF_CONDUCT.html#reporting",
+    "title": "Code of conduct",
+    "section": "Reporting",
+    "text": "Reporting\nRaise a concern with the journal club organisers directly. Anything involving the conduct of an organiser can be taken to the University of Melbourne’s staff complaint channels."
   }
 ]
