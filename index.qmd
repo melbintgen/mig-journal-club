@@ -23,17 +23,26 @@ read next. New members and visitors are welcome.
 :::
 
 ::: {.next-meeting}
-### Next meeting
+### Next meeting · November 2026
 
-**Thursday 8 October · 3:30 pm** · Room 124, Building 184
+**Date and time:** To be announced
 
-**Speakers:** Xiaochen Zhang and Jiadong Mao
+**Discussion lead:** Guan
 
-We will read León-Periñán, Karaiskos & Rajewsky, [*Ultrafast and reference-free
-sequence discovery in single-cell data*](https://www.nature.com/articles/s41586-026-10975-w)
-(*Nature*, 2026).
+We will read Jiang, Wang & Li, [*Beyond differential expression: Differential
+variability as an underappreciated axis in transcriptomics*](https://doi.org/10.1016/j.cels.2026.101706)
+(*Cell Systems*, 2026).
 
-Will this be a game changer for transcriptomics?
+This commentary reanalyses data from [Sun et al.'s 2024 memory study](https://doi.org/10.1038/s41586-023-07011-6),
+following a [statistical critique](https://www.nature.com/articles/s41586-025-08988-y)
+and [reply](https://www.nature.com/articles/s41586-025-08989-x).
+The authors question the original differential expression results. Their
+reanalysis reports memory-related signals in *differential variability*:
+changes in how widely gene expression varies between cells, rather than changes
+in the mean alone. We will discuss what that evidence supports and how to test it.
+
+This is likely our final journal club meeting of 2026. We will announce the time
+once it is confirmed.
 :::
 
 ## Past meetings
