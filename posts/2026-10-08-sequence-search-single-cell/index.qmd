@@ -4,7 +4,6 @@ description: "Malva makes sequence information hidden by gene counts searchable 
 date: 2026-10-08
 author: ""            # left blank: reports are transcript summaries, not authored pieces
 categories: [single-cell, genomics, benchmarking]
-draft: true
 ---
 
 ::: {.callout-note appearance="simple"}
