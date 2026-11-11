@@ -10,7 +10,67 @@
 <atom:link href="https://melbintgen.github.io/mig-journal-club/index.xml" rel="self" type="application/rss+xml"/>
 <description>Readings and discussion from the Melbourne Integrative Genomics journal club.</description>
 <generator>quarto-1.11.9</generator>
-<lastBuildDate>Thu, 08 Oct 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 10 Nov 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Memory genes, false positives and differential variability</title>
+  <link>https://melbintgen.github.io/mig-journal-club/posts/2026-11-10-differential-variability/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Paper.</strong> Jiang CF, Wang C, Li JJ. <em>Beyond differential expression: Differential variability as an underappreciated axis in transcriptomics.</em> Cell Systems 17(8):101706 (2026). <a href="https://doi.org/10.1016/j.cels.2026.101706">doi:10.1016/j.cels.2026.101706</a></p>
+<p><strong>Also discussed.</strong> Sun W et al.&nbsp;<em>Spatial transcriptomics reveal neuron–astrocyte synergy in long-term memory.</em> Nature 627:374–381 (2024). <a href="https://doi.org/10.1038/s41586-023-07011-6">doi:10.1038/s41586-023-07011-6</a> · Mukamel EA, Yu Z. <em>False positives in study of memory-related gene expression.</em> Nature 642:E1–E3 (2025). <a href="https://doi.org/10.1038/s41586-025-08988-y">doi:10.1038/s41586-025-08988-y</a> · Sun W et al.&nbsp;<em>Reply to: False positives in study of memory-related gene expression.</em> Nature 642:E4–E6 (2025). <a href="https://doi.org/10.1038/s41586-025-08989-x">doi:10.1038/s41586-025-08989-x</a></p>
+<p><strong>Presented by</strong> Guannan (Guan) Yang · <strong>10 November 2026</strong></p>
+</div>
+</div>
+</div>
+<section id="the-original-claim" class="level2">
+<h2 class="anchored" data-anchor-id="the-original-claim">The original claim</h2>
+<p>Sun et al.&nbsp;set out to find lasting transcriptional changes in the cells that encode a fear memory in the mouse basolateral amygdala. TRAP2 mice express a red reporter, tdTomato, in neurons that are active when tamoxifen is given, so injecting it at memory recall labels the “engram” cells involved. The design compared mice given fear training and later recall with three controls: mice left in their home cage, mice that went through the procedure without the shock, and mice that were shocked but never returned to the context for recall. Single-cell RNA sequencing and spatial transcriptomics followed.</p>
+<p>The headline results came from one small population: labelled inhibitory neurons of the BLA.Int.Gpr88 subtype, compared between the fear-recall and no-shock groups. The paper reported that <em>Tac1</em> fell more than sixfold and <em>Penk</em> rose more than fourfold, and described a neuronal subpopulation defined by increased <em>Penk</em> and decreased <em>Tac</em> expression as the most prominent component of the engram. The figure legends state that significance was assessed at unadjusted P &lt; 0.05.</p>
+</section>
+<section id="three-statistical-problems" class="level2">
+<h2 class="anchored" data-anchor-id="three-statistical-problems">Three statistical problems</h2>
+<p>Guan presented the critique by Mukamel and Yu as three separate errors, any one of which inflates false discoveries.</p>
+<p><strong>No correction for multiple testing.</strong> Around 3,500 genes were tested. Even if none truly differed, testing each at P &lt; 0.05 would be expected to produce roughly 180 “significant” genes. Mukamel and Yu reanalysed the data and found no differentially expressed genes once a false discovery rate correction was applied. The reply argued that correction risks overlooking genuine effects, that whether to apply it depends on context, and that the analysis was meant to generate hypotheses. Guan’s response was that a hypothesis-generating defence sits awkwardly with an abstract that presents memory-specific transcriptional signatures as findings.</p>
+<p><strong>Cells treated as independent replicates.</strong> The comparison rests on 70 labelled cells (45 fear-recall, 25 no-shock), drawn from only 11 mice (4 and 7). Cells from the same animal share its genotype, history and processing, so treating each cell as an independent sample overstates the evidence. The reply argued that each labelling event during recall can be regarded as an independent stochastic event. Guan’s view was that even if activation is random, the expression profiles of cells from one mouse are not independent. One attendee proposed a simple way out: drop the p-values entirely. Pseudoreplication distorts significance, but it does not change how genes rank by fold change. The authors could have reported large-fold-change genes descriptively as candidate markers. That framing would then require independent validation, which the group did not find beyond agreement with the spatial data. Whether the spatial and single-cell measurements came from the same animals, which would limit how independent that agreement is, was not settled at the meeting.</p>
+<p><strong>Double dipping.</strong> The reply said the test had been applied to 56 genes selected by systematic criteria, and that those genes replicated. The selection included a large fold change between the same two groups, computed from the same data, before testing those genes for a difference. This is selective inference without the correction it requires. Under the null hypothesis a valid p-value is uniformly distributed. Once genes have been filtered for apparent differences in the same data, their p-values pile up near zero whether or not any real effect exists. Guan illustrated this with simulations in which both unadjusted testing and fold-change prefiltering pushed the actual false discovery proportion well above the nominal level. Jiang et al.&nbsp;show the same pattern in the real data. The 56 preselected genes have p-values concentrated near zero, and standard multiple-testing corrections no longer behave as intended on them.</p>
+<p>Guan suggested what a sound version of the study would need: more mice, because the current data lack power for the conclusions drawn; and, if genes are to be preselected, a separate cohort to select them from. The four-group design also prompted a constructive idea. The controls are currently used informally during gene filtering. Guan proposed testing them formally, either with conjunction p-values across contrasts, or with a regression model whose interaction term isolates the effect of fear and recall together.</p>
+</section>
+<section id="looking-at-variance-instead-of-the-mean" class="level2">
+<h2 class="anchored" data-anchor-id="looking-at-variance-instead-of-the-mean">Looking at variance instead of the mean</h2>
+<p>Jiang et al.&nbsp;accept the critique and then ask a different question. Their reanalysis confirms that no gene shows a difference in mean expression after correction, whether tested on pseudobulk profiles (one per mouse) or on single cells. The top-ranked genes, without any correction, are enriched only for general cellular functions such as RNA processing. However, several genes from the original paper, <em>Tac1</em> among them, have distributions that differ in shape between conditions, with little change in the mean.</p>
+<p>They therefore tested for differential variability: whether the spread of a gene’s expression across cells differs between groups. Using Levene’s test, which compares deviations from the group centre and does not assume equal variances, they report 169 genes at a 5% false discovery rate, including <em>Tac1</em> and <em>Ramp1</em>. The top-ranked genes by this measure are enriched for terms such as dendritic spine organisation and long-term memory. The pattern held after removing extreme values, held when leaving out each mouse in turn, and did not appear when cells were permuted between groups. The authors present this as a partial reconciliation of the debate. The statistical criticisms stand, but the genes Sun et al.&nbsp;highlighted may carry a real signal along a different axis.</p>
+<p>Guan noted that variability is not independent of the mean. Under a negative binomial model, the variance of a count grows with its mean. The Wilcoxon test used for the original differential expression analysis compares ranks, and can respond to differences in distribution shape as well as location. Separating a change in variability from a change in mean is less clean than the contrast between the two analyses suggests.</p>
+</section>
+<section id="does-the-variability-signal-survive-the-same-criticism" class="level2">
+<h2 class="anchored" data-anchor-id="does-the-variability-signal-survive-the-same-criticism">Does the variability signal survive the same criticism?</h2>
+<p>One attendee argued that the biology favours this approach. Only a subset of labelled neurons may change expression after recall. If so, an effect should appear as a wider distribution in the fear-recall group rather than a uniform shift, which a test of means will tend to miss. Some of the plotted genes appeared bimodal, consistent with elevated expression in only some cells.</p>
+<p>The sharper objection was that the variability test is also run on cells, not mice. Levene’s test cannot take mouse as a covariate in the way a generalised linear model can. Jiang et al.&nbsp;justify the cell-level test on two grounds. Most mice contribute too few cells to estimate a variance per mouse. And variance ratios computed from pooled cells agree closely with those from mouse-level pseudobulk. The group was not persuaded that this settles the matter. Agreement of point estimates says nothing about whether the p-values are calibrated when cells within a mouse are correlated. Guan agreed that the issue is tricky, and suggested that a method decomposing variance into within-mouse and between-mouse components would be the natural next step. Such a method would itself rest on modelling assumptions. Asked whether a knockoff-based variable selection approach could help, Guan noted that knockoffs assume independent samples, so they would require pseudobulk data, and would likely have less power than a standard differential expression test.</p>
+<p>Two smaller questions stayed open. One attendee asked whether the unequal cell numbers in the two groups could inflate the result; Levene’s test accounts for group size, but the imbalance is substantial. Another asked how many gene ontology terms were enriched in total, since the figure shows a small set. Gene ontology results are often unstable, and a figure showing selected terms leaves open how representative they are. The same attendee was clear that the differential variability analysis is a substantial improvement on the original.</p>
+<p>Guan closed by placing the paper in a wider trend. Tests for differences in the whole distribution of expression, not just its mean or variance, are becoming computationally practical, and several tools now exist. A gene with no shift in mean may still differ in variance, and one with neither may still differ in shape. The broader lesson Guan drew was that a careful reanalysis can do more than refute a claim: it can open a better-posed biological question.</p>
+<hr>
+<p><em>Compiled from the meeting recording. Speaker separation is not available in the room-microphone transcript, so contributions are attributed only where a name was used aloud.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>single-cell</category>
+  <category>statistics</category>
+  <category>reproducibility</category>
+  <guid>https://melbintgen.github.io/mig-journal-club/posts/2026-11-10-differential-variability/</guid>
+  <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Searching single-cell data beyond gene counts</title>
   <link>https://melbintgen.github.io/mig-journal-club/posts/2026-10-08-sequence-search-single-cell/</link>
