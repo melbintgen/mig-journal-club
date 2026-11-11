@@ -4,7 +4,6 @@ description: "A reanalysis of a disputed memory study finds no shift in mean exp
 date: 2026-11-10
 author: ""            # left blank: reports are transcript summaries, not authored pieces
 categories: [single-cell, statistics, reproducibility]
-draft: true
 ---
 
 ::: {.callout-note appearance="simple"}
