@@ -9,7 +9,7 @@
 <link>https://melbintgen.github.io/mig-journal-club/</link>
 <atom:link href="https://melbintgen.github.io/mig-journal-club/index.xml" rel="self" type="application/rss+xml"/>
 <description>Readings and discussion from the Melbourne Integrative Genomics journal club.</description>
-<generator>quarto-1.10.19</generator>
+<generator>quarto-1.11.9</generator>
 <lastBuildDate>Thu, 08 Oct 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Searching single-cell data beyond gene counts</title>
