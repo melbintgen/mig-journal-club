@@ -23,26 +23,17 @@ read next. New members and visitors are welcome.
 :::
 
 ::: {.next-meeting}
-### Next meeting · November 2026
+### Next meeting · 2027
 
 **Date and time:** To be announced
 
-**Discussion lead:** Guan
+**Discussion lead:** To be announced
 
-We will read Jiang, Wang & Li, [*Beyond differential expression: Differential
-variability as an underappreciated axis in transcriptomics*](https://doi.org/10.1016/j.cels.2026.101706)
-(*Cell Systems*, 2026).
+Our November meeting was the last for 2026. We will announce the first paper for 2027
+here and to registered members.
 
-This commentary reanalyses data from [Sun et al.'s 2024 memory study](https://doi.org/10.1038/s41586-023-07011-6),
-following a [statistical critique](https://www.nature.com/articles/s41586-025-08988-y)
-and [reply](https://www.nature.com/articles/s41586-025-08989-x).
-The authors question the original differential expression results. Their
-reanalysis reports memory-related signals in *differential variability*:
-changes in how widely gene expression varies between cells, rather than changes
-in the mean alone. We will discuss what that evidence supports and how to test it.
-
-This is likely our final journal club meeting of 2026. We will announce the time
-once it is confirmed.
+Have a paper you would like the group to read? [Propose it](https://github.com/melbintgen/mig-journal-club/issues/new?template=propose-paper.yml).
+You do not have to present it yourself.
 :::
 
 ## Past meetings
